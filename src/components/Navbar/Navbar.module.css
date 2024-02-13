@@ -1,0 +1,130 @@
+@import "../../vars.css";
+@import "bootstrap/dist/css/bootstrap.css";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 6%;
+  z-index: 2;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 15%;
+}
+.leftContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.menu.show {
+  display: flex; /* Visa menyn när hamburgarmenyn är aktiv */
+}
+
+.menuItems {
+  display: flex;
+  list-style: none;
+  gap: 2rem; /* Justera gapet mellan länkarna enligt behov */
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.show {
+  left: 0; 
+} 
+
+.hide {
+  left: -100%; /* Gömmer menyn utanför skärmens vänstra kant */
+}
+
+.title {
+  display: flex;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--color-text);
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.title:hover {
+  color: var(--color-bg);
+  text-shadow: 0 0 1px var(--color-bg);
+}
+
+.menuItems a {
+  font-weight: 900;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.menuItems a:hover {
+  color: var(--color-bg);
+  text-shadow: 0 0 1px var(--color-bg);
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Visa hamburgarikonen */
+    font-size: 2rem; /* Storlek på hamburgarikonen */
+    cursor: pointer; /* Gör ikonen klickbar */
+  }
+
+  .menu {
+    display: flex; /* Ändra till flex för att behålla layouten */
+    flex-direction: column; /* Visa menylänkarna vertikalt */
+    position: fixed; /* Positionera menyn över innehållet */
+    left: 0;
+    top: 0;
+    width: 30%; /* Gör menyn skärmvidd */
+    max-height: 100%; /* Gör menyn skärmhög */
+    background-color: var(--color-text-hover); /* Bakgrundsfärg på menyn */
+    overflow-y: auto; /* Möjliggör skrollning om innehållet överskrider skärmhöjden */
+    transition: transform 0.5s ease-in-out; /* Gör att menyn glider in och ut när den visas och döljs */
+    z-index: 10; /* Säkerställer att menyn ligger över annat innehåll */
+    transform: translateX(-100%); /* Initialt placerad utanför skärmens vänstra kant */
+    border-bottom-right-radius: 30px;
+    box-shadow:  0 0 10px 0 rgba(10, 18, 43, 0.8);
+  }
+
+  .menu.show {
+    transform: translateX(0%); /* Glider in menyn till dess ursprungliga position */
+  }
+
+  .menuItems {
+    flex-direction: column;
+    margin-top: 30%; /* Lägg
+     /* Lägg till lite utrymme över menylänkarna */;
+  }
+
+  li{
+    display:block;
+    margin: 40% 0;
+  }
+
+  .menuItems a {
+    color: var(--color-bg);
+    font-weight: 900;
+    font-size: 1rem;
+    text-shadow: 0 0 1px var(--color-bg);
+  }
+
+}
+
+
+
+
+

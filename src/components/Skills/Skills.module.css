@@ -1,0 +1,130 @@
+@import "../../vars.css";
+
+
+.skillsContainer {
+  display: flex; /* Gör .skillsContainer till en flex-container */
+  justify-content: space space-between; /* Fördelar utrymme runt varje kolumn */
+  align-items: flex-start; /* Linjerar kolumnerna längst upp, om de har olika höjd */
+  flex-wrap: wrap; /* Gör så att kolumnerna kan flytta ner på en ny rad om det inte finns tillräckligt med plats */
+}
+
+.skill {
+  z-index: 1; /* Placerar kolumnerna över bakgrundsbilden */
+  flex: 1; /* Ger varje kolumn möjligheten att expandera och ta upp lika mycket utrymme */
+  margin: 10%; /* Ger lite utrymme mellan kolumnerna */
+  max-width: 70%; /* Sätter en maxbredd på varje kolumn för att förhindra att de blir för breda */
+}
+
+ .skills {
+  z-index: 2; /* Placerar kolumnerna över bakgrundsbilden */
+  margin-top: 10%;
+  color: var(--color-text);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
+
+.list {
+ list-style: none;
+}
+
+.pContainer {
+  display: flex; /* Använder flexbox för att möjliggöra centreringsfunktioner */
+  justify-content: center; /* Centrerar innehållet horisontellt inom containern */
+  align-items: center; /* Centrerar innehållet vertikalt inom containern */
+  text-align: center; /* Centrerar texten inom textelementet */
+  max-width: 70%; /* Maximal bredd för textcontainern */
+  margin: 0 auto; /* Centrerar containern horisontellt i dess förälderelement */
+  font-weight: 500;
+  color: var(--color-text);
+  z-index: 2;
+  margin-top: 25%;
+}
+
+.minaskills {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.diamond {
+  position: absolute;
+  z-index: 0;
+  left: 10%;
+}
+
+.p {
+  right: 20%;
+  position: absolute;
+  text-align: center;
+  margin-bottom: 10%;
+  max-width: 40%;
+}
+.imageBackground2 {
+  z-index: 0; /* Säkerställer att bilden ligger bakom annat innehåll */
+  position:absolute; /* Positionerar bilden relativt till viewporten */
+  float: left;
+  filter: blur(60px); /* Justerar kontrast, ljusstyrka och skärpa */
+  
+}
+
+@media screen and (max-width: 768px) {
+
+.skillsContainer {
+    flex-direction: column; /* Ändrar till column för att placera kolumnerna vertikalt */
+    align-items: center; /* Centrerar kolumnerna vertikalt */  
+}
+
+.skills {
+  margin-top: 5%;
+  color: var(--color-text);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pContainer {
+  align-items: center; 
+  text-align: center; /* Centrerar texten inom textelementet */
+  justify-content: center; /* Centrerar innehållet horisontellt inom containern */
+  flex-direction: column; /* Ändrar till column för att placera texten vertikalt */
+  max-width: 100%; /* Maximal bredd för textcontainern */
+  font-weight: 500;
+  color: var(--color-text);
+  z-index: 2;
+}
+
+.imageBackground2 img {
+  z-index: 0; /* Säkerställer att bilden ligger bakom annat innehåll */
+  float: left;
+  width: 100vw; /* Sätter bredden till 100% av viewportens bredd */
+  height: 100vh; /* Sätter höjden till 100% av viewportens höjd */
+  background-size: cover; /* Ser till att bilden täcker hela området */
+  top: 0; /* Placerar bilden i övre vänstra hörnet */
+
+}
+
+.diamond {
+  display: block;
+  position: relative;
+  margin-top: 5%;
+}
+
+.p {
+  margin-top: 80%;
+  text-align: center;
+  margin-bottom: 10%;
+  max-width: 90%;
+}
+
+.minaskills {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+}

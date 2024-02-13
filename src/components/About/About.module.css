@@ -1,0 +1,208 @@
+@import "../../vars.css";
+
+.about {
+    display: flex;
+    flex-direction: row; /* Ändra till row för att placera innehållet horisontellt */
+    align-items: center; /* Centrerar objekten vertikalt */
+    justify-content: center; /* Centrerar objekten horisontellt */
+    margin: 0 10%;
+    gap: 20px; /* Lägger till lite utrymme mellan textContainer och imageContainer */
+  }
+  
+  .textContainer {
+    z-index: 1;
+    flex: 1; /* Ger textContainer flexibilitet att expandera */
+    padding: 0 2%; /* Lägger till lite padding för bättre utseende */
+  }
+  
+  .imageContainer {
+    flex: 1; /* Ger imageContainer flexibilitet att expandera */
+    display: flex;
+    justify-content: center; /* Centrerar bilden i containern */
+    padding: 0 2%; /* Lägger till lite padding för bättre utseende */
+    overflow: hidden; /* Förhindrar att innehållet utanför containeren visas */
+  }
+  
+  .imageContainer img {
+    z-index: 1; /* Placerar bilden över texten */
+    max-width: 100%; /* Begränsar bildens bredd till containerens bredd */
+    height: auto; /* Behåller bildens aspektförhållande */
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(108, 109, 156, 0.1) ;
+  }
+  .imageBackground{
+    position: absolute;
+    z-index: 0;
+    filter: blur(100px);
+  }
+
+
+  .h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-text);
+    margin-bottom: 5%;
+  }
+
+  .h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-text);
+    margin-bottom: 5%;
+  }
+  
+  .p {
+    font-size: 1rem;
+    color: var(--color-text);
+    text-align: left; /* Justerar texten till vänster */
+    margin-bottom: 5%;
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes typing {
+    0% { width: 0; }
+    50% { width: 75%; } /* Full bredd vid 50% för att låta texten visas helt */
+    100% { width: 0; } /* Återgår till 0 i slutet för att starta om */
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(255, 255, 255); } 
+  }
+  
+  .typing-effect {
+    border-right: 1px solid rgb(255, 255, 255); /* Simulerar en blinkande markör */
+    white-space: nowrap;
+    overflow: hidden; /* Gömmer text utanför elementets bredd */
+    width: 0;
+    animation: typing 6s steps(30, end) infinite, blink-caret .75s step-end infinite;
+  }
+  
+  .slidingText {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  
+  .slidingImage {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+
+  @media screen and (max-width: 768px) {
+    .about {
+      flex-direction: column; /* Ändra till column för att placera innehållet vertikalt */
+      gap: 10px; /* Lägger till lite utrymme mellan textContainer och imageContainer */
+    }
+
+    .textContainer {
+      padding: 0; 
+      display: flex; /* Gör textContainern till en flex-container */
+      flex-direction: column; /* Stackar barn vertikalt */
+      align-items: center; /* Centrerar barn horisontellt */
+      text-align: center; /* Centrerar texten inuti barn */
+    }
+
+    .imageContainer {
+      padding: 0; /* Tar bort padding för bättre utseende */
+    }
+
+    .h1 {
+      font-size: 2rem;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      margin-top: 5%;
+    }
+
+    .h2 {
+      font-size: 1.5rem;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .p {
+      text-align: center; /* Justerar texten till vänster */
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .imageContainer img {
+      max-width: 100%; /* Begränsar bildens bredd till containerens bredd */
+      height: auto; /* Behåller bildens aspektförhållande */
+    }
+
+    .imageBackground img {
+      width: 100vw; /* Sätter bredden till 100% av viewportens bredd */
+      height: 100vh; /* Sätter höjden till 100% av viewportens höjd */
+      background-size: cover; /* Ser till att bilden täcker hela området */
+      background-position: center; /* Centrerar bilden */
+    }
+
+    .typing-effect {
+      animation: typing 6s steps(30, end) infinite, blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing{
+      0% { width: 0; }
+      50% { width: 60%; } /* Full bredd vid 50% för att låta texten visas helt */
+      100% { width: 0; } /* Återgår till 0 i slutet för att starta om */ 
+    }
+
+    .slidingText {
+      animation: slideInFromLeft 1s ease-out forwards;
+    }
+    
+  }
+
+  @media screen and (max-width: 437px) {
+    .about {
+      margin: 0 5%;
+    }
+
+    .h1 {
+      font-size: 1.5rem;
+      margin-top: 5%;
+    }
+
+    .h2 {
+      font-size: 1.25rem;
+    }
+
+    .p {
+      font-size: 0.75rem;
+    }
+
+    .typing-effect {
+      animation: typing 6s steps(30, end) infinite, blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing{
+      0% { width: 0; }
+      50% { width: 62%; } /* Full bredd vid 50% för att låta texten visas helt */
+      100% { width: 0; } /* Återgår till 0 i slutet för att starta om */ 
+    }
+
+  }
+  
