@@ -28,10 +28,7 @@
 .menuItems {
   display: flex;
   list-style: none;
-  gap: 2rem; /* Justera gapet mellan länkarna enligt behov */
-  background-color: rgb(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 2%;
+  gap: 4rem; /* Justera gapet mellan länkarna enligt behov */
 }
 
 .hamburger {
@@ -71,8 +68,7 @@
 }
 
 .menuItems a:hover {
-  color: var(--color-bg);
-  text-shadow: 0 0 1px var(--color-bg);
+  color: var(--color-text-hover);
 }
 
 
@@ -89,15 +85,15 @@
     position: fixed; /* Positionera menyn över innehållet */
     left: 0;
     top: 0;
-    width: 30%; /* Gör menyn skärmvidd */
+    width: 20%; /* Gör menyn skärmvidd */
     max-height: 100%; /* Gör menyn skärmhög */
-    background-color: var(--color-text-hover); /* Bakgrundsfärg på menyn */
+    background-color: var(--color-text); /* Bakgrundsfärg på menyn */
     overflow-y: auto; /* Möjliggör skrollning om innehållet överskrider skärmhöjden */
     transition: transform 0.5s ease-in-out; /* Gör att menyn glider in och ut när den visas och döljs */
     z-index: 10; /* Säkerställer att menyn ligger över annat innehåll */
     transform: translateX(-100%); /* Initialt placerad utanför skärmens vänstra kant */
     border-bottom-right-radius: 30px;
-    box-shadow:  0 0 10px 0 rgba(10, 18, 43, 0.8);
+    box-shadow:  0 0 15px 0 rgba(10, 18, 43, 0.9);
   }
 
   .menu.show {
@@ -106,20 +102,20 @@
 
   .menuItems {
     flex-direction: column;
-    margin-top: 30%; /* Lägg
+    margin-top: 10%; /* Lägg
      /* Lägg till lite utrymme över menylänkarna */;
   }
 
+
   li{
     display:block;
-    margin: 40% 0;
+    margin: 10% 0;
   }
 
   .menuItems a {
     color: var(--color-bg);
     font-weight: 900;
     font-size: 1rem;
-    text-shadow: 0 0 1px var(--color-bg);
   }
 
 }

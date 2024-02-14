@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import styles from "./Navbar.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons'; 
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,11 +29,10 @@ export const Navbar = () => {
                 <div className={styles.hamburger} onClick={toggleMenu}>☰</div>
                 <div className={`${styles.menu} ${isMenuOpen ? styles.show : ''}`}>
                     <ul className={styles.menuItems}>
-                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}>About</a></li>
-                        <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}>Skills</a></li>
-                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}>Projects</a></li>
-                        <li><div className={styles.contact}><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}>Contact</a></div></li>
-                        <li><a href="#Home" onClick={(e) => { e.preventDefault(); handleScroll('/'); }}>Home</a></li>
+                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}><FontAwesomeIcon icon={faHouse}/></a></li>
+                        <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}><FontAwesomeIcon icon={faCode} /></a></li>
+                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}><FontAwesomeIcon icon={faBriefcase} /></a></li>
+                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}><FontAwesomeIcon icon={faEnvelope} /></a></li>
                     </ul>
                 </div>
             </div>

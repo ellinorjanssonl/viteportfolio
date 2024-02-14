@@ -10,7 +10,7 @@ export const Contact = () => {
         <p><strong>Telefon:</strong> 123-456-7890</p>
         <div className={styles.socialMediaLinks}>
           <a href="https://www.linkedin.com/in/dinprofil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.twitter.com/dinanvändarnamn" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://www.github.com/dinanvändarnamn" target="_blank" rel="noopener noreferrer">Github</a>
           <a href="https://www.facebook.com/dinprofil" target="_blank" rel="noopener noreferrer">Facebook</a>
           {/* Lägg till fler länkar efter behov */}
         </div>

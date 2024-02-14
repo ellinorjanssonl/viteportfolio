@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
+
 function App() {
   return <div className={styles.App}>
      <Navbar/> 
