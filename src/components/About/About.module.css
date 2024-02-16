@@ -22,6 +22,16 @@
     padding: 0 2%; /* Lägger till lite padding för bättre utseende */
     overflow: hidden; /* Förhindrar att innehållet utanför containeren visas */
   }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Startar och slutar i originalposition */
+    }
+    50% {
+      transform: translateY(-20px); /* Flyttar upp elementet 20px */
+    }
+  }
+  
   
   .imageContainer img {
     z-index: 1; /* Placerar bilden över texten */
@@ -29,8 +39,12 @@
     height: auto; /* Behåller bildens aspektförhållande */
     border-radius: 100%;
     border: none;
-    background-color: rgba(108, 109, 156, 0.1) ;
+    background-image: radial-gradient(circle, rgba(255, 107, 225, 0.9) 5%, rgba(94, 130, 207, 0.2) 70%);
+    animation: bounce 4s ease-in-out infinite;
+    margin-top: 5%;
+    box-shadow: 10px 10px 10px 10px rgba(22, 19, 27, 0.2);
   }
+
   .imageBackground{
     position: absolute;
     z-index: 0;
