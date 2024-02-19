@@ -1,5 +1,4 @@
 @import "../../vars.css";
-@import "bootstrap/dist/css/bootstrap.css";
 
 .navbar {
   display: flex;
@@ -8,6 +7,19 @@
   padding-top: 5%;
   padding-bottom: 6%;
   z-index: 2;
+}
+
+.logo {
+  position: fixed;
+  top: 2vh;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  text-decoration: none;
+}
+
+.logo img {
+  border-radius: 100%;
 }
 
 .rightContainer {
@@ -76,6 +88,14 @@
     display: block; /* Visa hamburgarikonen */
     font-size: 2rem; /* Storlek på hamburgarikonen */
     cursor: pointer; /* Gör ikonen klickbar */
+  }
+
+  .logo {
+    display: flex;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 0;
   }
 
   .menu {

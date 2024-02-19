@@ -1,71 +1,83 @@
 @import "../../vars.css";
-@import "bootstrap/dist/css/bootstrap.css";
 
 .flexContainer {
-  margin-top: 15%;
+  margin-top: 5%;
   display: flex;
   justify-content: space-between; 
   margin-left: 10%;
   margin-right: 10%;
+  align-items: center;
 }
 
 .pContainer {
-  margin-top: 5%;
   z-index: 1;
-  flex-basis: 35%; /* Justera denna bredd efter behov */
+  flex-basis: 40%; /* Justera denna bredd efter behov */
 }
 
 .p {
-  margin-top: 10%; /* Justera avståndet mellan bild och text efter behov */
   z-index: 2;
   font-size: 1rem; /* Justera textstorleken efter behov */
+  
 }
 
 .skillsContainer {
   flex-basis: 40%; /* Justera denna bredd efter behov */
+  border-radius: 15px;
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
-
+  gap: 20px; /* Detta lägger till ett jämnt mellanrum mellan listobjekten */
 }
 
 .list li {
-  background-image: radial-gradient(circle, rgba(255, 173, 239, 0.9) 10%, rgba(94, 130, 207, 0.2) 100%);
+  background-color: rgba(39, 12, 55, 0.2);
+  box-shadow: 0 4px 6px rgba(108, 198, 254, 0.7);
+  border-radius: 15px;
+  color: var(--color-text);
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 0.75rem; /* Justera textstorleken efter behov */
+  display: flex;
+  justify-content: center;
   list-style: none;
-  text-align: center;
-  color: var(--color-bg);
-  font-weight: 999;
-  font-style: bold;
-  font-size: 1rem; /* Justera textstorleken efter behov */
-  text-shadow: 0 0 1px var(--color-bg);
-  border:none;
-  border-radius: 15px; /* Justera rundheten på ramen efter behov */
-  padding: 0.75rem; /* Justera padding efter behov */
-  margin: 0.5rem; /* Justera marginalen efter behov */
-  flex: 1 1 22%; /* Justera detta för att kontrollera hur många färdigheter som visas per rad */
+  flex: 1 calc(25% - 1px);
 }
-
+.h1 {
+  margin-left: 25%;
+  margin-right: 20%;
+  border-radius: 15px;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 5%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 .diamond {
-  max-width: 100%; /* Justera storleken på din diamantbild */
-  justify-content: center; /* Centrerar bilden horisontellt */
-  position: relative; /* Positionerar bilden relativt till föräldern */
+  display: flex; /* Gör att bilden hamnar i mitten av föräldern */
+  justify-content: center; /* Centrerar bilden horisontellt */ 
+  margin-bottom: 25%; /* Lägger till lite utrymme under bilden */
 }
 
-
 .diamond img {
-  position: relative; /* Positionerar bilden relativt till föräldern */
-  max-width: 100%; /* Justera storleken på din diamantbild */
+  display: flex; /* Tar bort extra utrymme runt bilden */
+  position: absolute; /* Positionerar bilden relativt till föräldern */
+}
+
+.skills {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
   .flexContainer {
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
   }
   .pContainer {
+    margin-top: 10%;
     flex-basis: 100%;
     justify-content: center;
   }
@@ -73,20 +85,25 @@
     flex-basis: 100%;
     justify-content: center;
   }
-
   .list {
     margin: 0;
     padding: 0;
   }
   .diamond img {
-    position: relative; /* Positionerar bilden relativt till föräldern */
-    margin-bottom: -25%;
-    margin-top: 10%;
+    z-index: 0;
+    display:grid;
+    position: absolute; /* Positionerar bilden relativt till föräldern */
     max-width: 100%; /* Justera storleken på din diamantbild */
   }
+
+  .list li {
+    z-index: 2;
+    margin: 10px;
+    padding: 0.5rem;
+  }
   .diamond {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 40vh;
+    width: 100%;
     display: flex;
     justify-content: center; /* Centrerar bilden horisontellt */
   }
@@ -94,4 +111,36 @@
     text-align: center;
   }
 
+}
+
+@media screen and (max-width: 468px){
+  .diamond img {
+    max-width: 50%; /* Justera storleken på din diamantbild */
+  }
+  .list li {
+    padding: 0.5rem;
+    font-size: 0.5rem; /* Justera textstorleken efter behov */
+  }
+  .p {
+    font-size: 1rem; /* Justera textstorleken efter behov */
+  }
+  .flexContainer {
+    margin-top: 10%;
+  }
+  .pContainer {
+    margin-top: 10%;
+  }
+  .diamond {
+    margin-bottom: 20vh;
+  }
+
+  .list {
+    gap: 10px; /* Detta lägger till ett jämnt mellanrum mellan listobjekten */
+  }
+  .list li {
+    padding: 0.5rem;
+    font-size: 0.5rem; /* Justera textstorleken efter behov */
+  }
+
+  
 }

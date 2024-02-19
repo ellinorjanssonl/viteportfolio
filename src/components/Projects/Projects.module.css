@@ -1,12 +1,127 @@
 @import "../../vars.css";
-@import 'bootstrap/dist/css/bootstrap.css';
 
 .projects {
   display: flex;
-  flex-direction: column;
+  overflow-x:visible; 
+  margin-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  
+}
+
+.projectContainer {
+  display: flex; /* Placerar alla projekt bredvid varandra */
+  gap: 5%; /* Skapar utrymme mellan projekten */
+  padding: 0 10px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */
+ 
+  
+}
+
+.projectContainer h3, p {
+  margin-top: 10%;
+  text-align: center; /* Centrerar rubriken */
   align-items: center;
   justify-content: center;
-  padding-top: 5%;
-  z-index: 2;
-  margin: 0 10%;
+
 }
+
+.projectContainer img {
+  position:relative;
+  max-width: 100%; /* Gör bilden fullbredd */
+}
+
+.projectLinks {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Justera efter behov */
+  margin-top: 20px; /* Justera efter behov */
+}
+
+.projectLinks a {
+  margin-bottom: 5%;
+  background: #aa2eb3; /* Blå bakgrundsfärg */
+  padding: 5px 20px; /* Justera efter behov */
+  text-decoration: none; /* Tar bort understrykning */
+  border-radius: 15px; /* Rundar kanterna */
+  transition: background-color 0.3s; /* Gör bakgrundsfärgsändringen mjuk */
+}
+
+.projectLinks a:hover {
+  background: #2fbbe1; /* Mörkare blå färg vid hovring */
+}
+
+.project {
+  height: auto;
+  flex: 0 0 30%; /* Ger varje projekt en basbredd och förhindrar att de växer eller krymper */
+  box-shadow: 0 4px 6px rgba(108, 198, 254, 0.7); /* Lägger till en lätt skugga för djup */
+  border-radius: 15px; /* Rundar hörnen på projektet */
+  flex-direction: column; /* Ordna bild och text vertikalt */
+  transition: transform 0.3s ease; /* Gör förstoringsanimationen mjuk */
+  margin-bottom: 10%; /* Lägger till lite utrymme under projekten */
+  margin-top: 5%;
+  background-color: rgba(39, 76, 129, 0.1);
+}
+
+.project img {
+  height: 50vh;
+}
+
+.project:hover {
+  transform: scale(1.2); /* Förstorar projektet när det hovras över */
+  z-index: 1; /* Ser till att det förstorade projektet ligger ovanpå de andra */
+}
+
+/* Stil för scrollbars */
+::-webkit-scrollbar {
+  height: 8px; /* Ställer in höjden på scrollbaren */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg) /* Färg på scrollbar-spåret */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-bg) /* Färg på scrollbar-thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #50c5ff; /* Färg på scrollbar-thumb när hovrad */
+}
+
+/* Media query för mindre skärmar */
+@media screen and (max-width: 768px) {
+ .projectContainer {
+   flex-direction: column; /* Placerar projekten under varandra */
+   align-items: center; /* Centrerar projekten horisontellt */
+   padding: 0; /* Tar bort padding för bättre utseende */
+   gap: 2%;
+ }
+
+  .projects {
+    margin-top: 10%; /* Justera efter behov */
+    
+  } 
+
+  .projectContainer p {
+    margin-top: 5%;
+    font-size: 1.5rem; /* Justera textstorleken efter behov */
+  }
+
+  .projectContainer h3 {
+    margin-top: 0;
+    font-size: 2.5rem; /* Justera textstorleken efter behov */
+  }
+  .project {
+    background-color: rgba(39, 76, 129, 0.2);
+  }
+
+
+
+}
+
+
+
+
+
+

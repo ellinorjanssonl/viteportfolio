@@ -11,7 +11,7 @@ export const About = () => {
   return (
     <div id="about" className={styles.about}>
       <div className={`${styles.textContainer} ${animate ? styles.slidingText : ''}`}>
-        <h1 className={styles.h1}>Ellinor Jansson Lande</h1>
+        <h1 className={styles.h1}> <span className={styles.ellinor}> ELLINOR </span> JANSSON LANDE</h1>
         <h2 className={`${styles.h2} ${styles.typingEffect}`}>Frontend Developer.</h2>
         <p className={styles.p}>
           I am a Frontend web developer with a passion for creating beautiful, user-friendly, and functional web applications. 

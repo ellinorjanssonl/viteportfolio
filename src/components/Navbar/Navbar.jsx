@@ -22,6 +22,9 @@ export const Navbar = () => {
 
     return (
             <nav className={styles.navbar}>
+                <div className={styles.logo}>
+                <img src="/whitelogo.png" alt="logo"></img>
+                </div>
             <div className={styles.leftContainer}>
                 <a className={styles.title} href="/cv.pdf" download="CV_Ellinor_Jansson_Lande.pdf">Download CV</a>
             </div>

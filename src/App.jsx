@@ -5,9 +5,8 @@ import { About } from "./components/About/About";
 import { Skills } from "./components/Skills/Skills";
 import { Projects } from "./components/Projects/Projects";
 import { Contact } from "./components/Contact/Contact";
-import "bootstrap/dist/css/bootstrap.min.css";
-/* import { motion } from "framer-motion" */
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+ 
 
 
 function App() {
