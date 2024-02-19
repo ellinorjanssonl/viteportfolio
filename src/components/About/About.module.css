@@ -16,8 +16,7 @@
   }
   
   .ellinor {
-    color:rgba(255, 107, 225);
-    
+    color:rgba(255, 107, 225);  
   }
   .imageContainer {
     flex: 1; /* Ger imageContainer flexibilitet att expandera */

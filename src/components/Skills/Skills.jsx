@@ -1,28 +1,37 @@
-import React from "react"; // Lägg till useState-import
+import React from "react";
 import styles from "./Skills.module.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGit, faNodeJs, faHtml5, faCss3Alt, faJs, faReact, faBootstrap} from "@fortawesome/free-brands-svg-icons";
 import { faDatabase, faCodeBranch, faImage} from "@fortawesome/free-solid-svg-icons";
-
+import { motion, useInView } from 'framer-motion'; // Lägg till import
 
 export const Skills = () => {
+    const ref = React.useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    const diamondVariants = {
+        visible: { opacity: 1, scale: 1, rotate: 360, transition: { duration: 1.5 } },
+        hidden: { opacity: 0, scale: 0 }
+    };
+
     return (
         <div id="skills" className={styles.skills}>
             <div className={styles.flexContainer}>
                 <div className={styles.pContainer}>
-        
-                        <p className={styles.p}>The list shows my different experiences in 
-                        frontend, backend, and other things I consider important for a good understanding of web-application designs.</p>
-                 
+                    <p className={styles.p}>The list shows my different experiences in frontend, backend, and other things I consider important for a good understanding of web-application designs.</p>
                 </div>
-                <div className={styles.diamond}>
+                <motion.div
+                    ref={ref}
+                    variants={diamondVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    className={styles.diamond}
+                >
                     <img src="/Illustration (1).png" alt="diamond" />
-                </div>
+                </motion.div>
                
                 <div className={styles.skillsContainer}>
                     <h1 className={styles.h1}>MY CODING SKILLS</h1>
-               
                     <div className={styles.skill}>
                         <ul className={styles.list}>
                             <li><FontAwesomeIcon icon={faHtml5} size="lg" color="red" /> Html</li>

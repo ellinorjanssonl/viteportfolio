@@ -4,141 +4,79 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5%;
-  padding-bottom: 6%;
-  z-index: 2;
+  padding: 1rem 2rem;
 }
 
-.logo {
-  position: fixed;
-  top: 2vh;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  text-decoration: none;
-}
-
-.logo img {
-  border-radius: 100%;
-}
-
-.rightContainer {
-  display: flex;
-  align-items: center;
-  margin-right: 15%;
-}
 .leftContainer {
   display: flex;
   align-items: center;
-  margin-left: 15%;
-}
-
-.menu.show {
-  display: flex; /* Visa menyn när hamburgarmenyn är aktiv */
-}
-
-.menuItems {
-  display: flex;
-  list-style: none;
-  gap: 4rem; /* Justera gapet mellan länkarna enligt behov */
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.show {
-  left: 0; 
-} 
-
-.hide {
-  left: -100%; /* Gömmer menyn utanför skärmens vänstra kant */
 }
 
 .title {
-  display: flex;
-  font-weight: 900;
+  font-weight: bold;
+  color: #ffffff; /* Eller valfri textfärg */
   text-decoration: none;
-  color: var(--color-text);
-  width: 100%;
-  padding: 10px;
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
 }
 
-.title:hover {
-  color: var(--color-bg);
-  text-shadow: 0 0 1px var(--color-bg);
+.rightContainer {
+  position: relative;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex; /* Hamburgarmenyn är alltid synlig */
+  z-index: 100; /* Ser till att hamburgarmenyn är ovanpå menyn */
+}
+.closeIcon {
+  position: absolute;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 101; /* Se till att krysset ligger över den utfällbara menyn */
+}
+
+.menu {
+  display: none; /* Gömmer menyn initialt */
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 70vh; /* Fullskärmshöjd */
+  width: 200px; /* Bredd på den utfällbara menyn */
+  background-color: #201331; /* Ljus bakgrundsfärg för menyn */
+  flex-direction: column;
+  padding-top: 4rem; /* Utrymme för krysset */
+  box-shadow: -4px 3px 5px rgba(86, 145, 255, 0.2); /* Lägg till skugga för djup */
+  z-index: 99; /* Ser till att menyn är under hamburgarmenyn */
+}
+
+.menu.show {
+  display: flex; /* Visar menyn när den är aktiv */
+}
+
+.menuItems {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItems li {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc; /* Lägg till en tunn linje mellan varje länk */
 }
 
 .menuItems a {
-  font-weight: 900;
-  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
   text-decoration: none;
-  color: var(--color-text);
+  transition: color 0.3s;
 }
 
 .menuItems a:hover {
-  color: var(--color-text-hover);
+  color: #6fb5ff;
 }
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Visa hamburgarikonen */
-    font-size: 2rem; /* Storlek på hamburgarikonen */
-    cursor: pointer; /* Gör ikonen klickbar */
-  }
-
-  .logo {
-    display: flex;
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    top: 0;
-  }
-
-  .menu {
-    display: flex; /* Ändra till flex för att behålla layouten */
-    flex-direction: column; /* Visa menylänkarna vertikalt */
-    position: fixed; /* Positionera menyn över innehållet */
-    left: 0;
-    top: 0;
-    width: 20%; /* Gör menyn skärmvidd */
-    max-height: 100%; /* Gör menyn skärmhög */
-    background-color: var(--color-text); /* Bakgrundsfärg på menyn */
-    overflow-y: auto; /* Möjliggör skrollning om innehållet överskrider skärmhöjden */
-    transition: transform 0.5s ease-in-out; /* Gör att menyn glider in och ut när den visas och döljs */
-    z-index: 10; /* Säkerställer att menyn ligger över annat innehåll */
-    transform: translateX(-100%); /* Initialt placerad utanför skärmens vänstra kant */
-    border-bottom-right-radius: 30px;
-    box-shadow:  0 0 15px 0 rgba(10, 18, 43, 0.9);
-  }
-
-  .menu.show {
-    transform: translateX(0%); /* Glider in menyn till dess ursprungliga position */
-  }
-
-  .menuItems {
-    flex-direction: column;
-    margin-top: 10%; /* Lägg
-     /* Lägg till lite utrymme över menylänkarna */;
-  }
-
-
-  li{
-    display:block;
-    margin: 10% 0;
-  }
-
-  .menuItems a {
-    color: var(--color-bg);
-    font-weight: 900;
-    font-size: 1rem;
-  }
-
-}
-
 
 
 
