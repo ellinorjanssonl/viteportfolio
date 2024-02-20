@@ -25,7 +25,6 @@ export const Contact = () => {
     })
     .then(response => {
       if (response.ok) {
-        alert("Thank you!");
         setComment(""); // Återställer kommentarfältet
       } else {
         alert("Please, try again!");
