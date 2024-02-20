@@ -15,7 +15,7 @@ export const About = () => {
         <h2 className={`${styles.h2} ${styles.typingEffect}`}>Frontend Developer.</h2>
         <p className={styles.p}>
           I am a Frontend web developer with a passion for creating beautiful, user-friendly, and functional web applications. 
-          I have a strong understanding of front-end development but I have also done a lot och backend applications. 
+          I have a strong understanding of front-end development but has also done a lot of backend applications. 
           I am a quick learner and am always looking to expand my knowledge and skills. 
           I am excited to bring my creativity and technical skills to a team and help create amazing web applications.
          </p>
