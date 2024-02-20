@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Contact.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 export const Contact = () => {
   const [comment, setComment] = useState(""); // Hantera användarens kommentar
@@ -31,7 +33,6 @@ export const Contact = () => {
   };
 
   return (
-    
     <motion.div
       id="contact"
       className={styles.contactContainer}
@@ -48,20 +49,20 @@ export const Contact = () => {
       >
         <p><strong>E-post:</strong> Ellinor_jansson@hotmail.com</p>
         <p><strong>Telefon:</strong> +46 707836682</p>
-    
-      <div className={styles.socialMediaLinks}>
-        <a href="https://www.linkedin.com/in/dinprofil" target="_blank" rel="Linkedin">
-          
-        </a>
-        <a href="https://www.github.com/dinanvändarnamn" target="_blank" rel="Github">
-          
-        </a>
-        <a href="https://www.facebook.com/dinprofil" target="_blank" rel="Facebook">
-          
-        </a>
-      </div>
-      </motion.div>
-      <form className={styles.contactForm} onSubmit={handleSubmit}>
+
+        <div className={styles.socialMediaLinks}>
+  <a href="https://www.linkedin.com/in/dinprofil" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faLinkedin} size="lg" />
+  </a>
+  <a href="https://www.github.com/dinanvändarnamn" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faGithub} size="lg" />
+  </a>
+  <a href="https://www.facebook.com/dinprofil" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faFacebook} size="lg" />
+  </a>
+</div>
+
+    </motion.div><form className={styles.contactForm} onSubmit={handleSubmit}>
         <label htmlFor="userComment">Din Kommentar</label>
         <textarea
           id="userComment"
@@ -69,8 +70,7 @@ export const Contact = () => {
           rows="4"
           placeholder="Skriv din kommentar här..."
           value={comment}
-          onChange={(e) => setComment(e.target.value)}
-        ></textarea>
+          onChange={(e) => setComment(e.target.value)}></textarea>
         <button type="submit">Skicka Kommentar</button>
       </form>
     </motion.div>

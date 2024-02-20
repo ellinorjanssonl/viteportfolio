@@ -2,29 +2,31 @@
 
 /* Contact.module.css */
 .contactContainer {
-    max-width: 800px;
+    max-width: 60%;
     margin: 0 auto;
     padding: 2rem;
-    background: #f9f9f9;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background: var(--color-bg);
+    border: 1px solid #76caff;
     border-radius: 8px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
   .contactHeader {
     text-align: center;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 1.5rem;
   }
   
   .contactInfo {
+    font-size: 1rem;
     margin-bottom: 2rem;
-    color: #666;
+    color: #ffffff;
   }
   
   .contactInfo p {
+    font-size: 1rem;
+    font-weight: bold;
     line-height: 1.6;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
   
   .socialMediaLinks {
@@ -36,15 +38,15 @@
   
   .socialMediaLinks a {
     text-decoration: none;
-    color: #fff;
-    background: #007bff;
+    color:#1c0d39;
+    background: #76caff;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 15px;
     transition: background-color 0.3s ease;
   }
   
   .socialMediaLinks a:hover {
-    background: #0056b3;
+    background: #75d5ff;
   }
   
   .contactForm {
@@ -53,30 +55,42 @@
   }
   
   .contactForm label {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #ffffff;
   }
   
   .contactForm textarea {
+    background:#76caff;
+    width: 50%;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #76caff;
+    border-radius: 15px;
     resize: vertical;
   }
   
   .contactForm button {
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center;
     cursor: pointer;
-    background: #28a745;
+    width: 50%;
+    background: #76caff;
     color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 15px;
     transition: background-color 0.3s ease;
   }
   
   .contactForm button:hover {
-    background: #218838;
+    background: #ff63f7;
   }
   
