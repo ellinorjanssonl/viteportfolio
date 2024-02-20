@@ -13,6 +13,7 @@ export const Navbar = () => {
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
+        setIsMenuOpen(false);
     };
 
     const toggleMenu = () => {
