@@ -41,10 +41,11 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 150px; /* Bredd på den utfällbara menyn */
+  width: 120px; /* Bredd på den utfällbara menyn */
+  text-align: center;
   background-color: transparent; /* Ljus bakgrundsfärg för menyn */
   flex-direction: column;
-  padding-top: 4rem; /* Utrymme för krysset */
+  padding-top: 5rem; /* Utrymme för krysset */
   z-index: 99; /* Ser till att menyn är under hamburgarmenyn */
 }
 .menu.active {
@@ -112,7 +113,7 @@
     padding: 0;
     margin: 0;
     border: 1px solid #82b3f7;
-    background-color: rgba(9, 26, 46, 0.8);
+    background-color: rgba(128, 42, 121, 0.8);
     border-radius: 15px; /* Rundar hörnen på menyn */
     box-shadow: -4px 1px 5px rgba(92, 192, 255, 0.3); /* Lägg till skugga för djup */
   }
@@ -122,9 +123,10 @@
   }
 
   .menuItems a {
+    color: var(--color-text);
+    text-shadow: 4px 4px 4px var(--color-bg);
     font-size: 15px;
     font-weight: bold;
-    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s;
   }
