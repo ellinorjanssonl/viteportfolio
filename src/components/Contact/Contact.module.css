@@ -1,13 +1,9 @@
 @import "../../vars.css";
 
 /* Contact.module.css */
-.contactContainer {
-    max-width: 60%;
+.contact {
     margin: 0 auto;
     padding: 2rem;
-    background: var(--color-bg);
-    border: 1px solid #76caff;
-    border-radius: 8px;
   }
   
   .contactHeader {
@@ -38,15 +34,17 @@
   
   .socialMediaLinks a {
     text-decoration: none;
-    color:#1c0d39;
-    background: #76caff;
-    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    color:#76caff;
+    padding: 0.75rem 1rem;
     border-radius: 15px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.7s ease;
+    transition: transform 0.5s ease;
   }
   
   .socialMediaLinks a:hover {
-    background: #75d5ff;
+    color:#ff63f7;
+    transform: scale(1.2);
   }
   
   .contactForm {
@@ -57,34 +55,52 @@
   .contactForm label {
     text-align: center;
     font-size: 1rem;
-    font-weight: bold;
     margin-bottom: 0.5rem;
     color: #ffffff;
   }
   
   .contactForm textarea {
-    background:#76caff;
-    width: 50%;
+    background-color: #ffffff;
+    width: 30%;
     align-self: center;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #76caff;
+    border: 1px solid #0e091e;
     border-radius: 15px;
     resize: vertical;
   }
+
+  .contactButton {
+    align-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #76caff;
+    color: var(--color-bg);
+    font-size: 1rem;
+    border-radius: 15px;
+    transition: background-color 0.7s ease;
+    transition: transform 0.5s ease;
+  }
+
+    .contactButton:hover {
+        background: #ff63f7;
+        transform: scale(1.1);
+    }
+
   
   .contactForm button {
     font-size: 1rem;
     font-weight: bold;
     align-self: center;
     cursor: pointer;
-    width: 50%;
+    width: 10%;
     background: #76caff;
-    color: #fff;
+    color: var(--color-bg);
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem;
     font-size: 1rem;
     border-radius: 15px;
     transition: background-color 0.3s ease;
