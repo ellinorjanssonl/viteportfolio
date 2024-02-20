@@ -100,7 +100,7 @@
 
   @keyframes typing {
     0% { width: 0; }
-    50% { width: 75%; } /* Full bredd vid 50% för att låta texten visas helt */
+    50% { width: 80%; } /* Full bredd vid 50% för att låta texten visas helt */
     100% { width: 0; } /* Återgår till 0 i slutet för att starta om */
   }
   
@@ -111,7 +111,7 @@
   
   .typing-effect {
     border-right: 1px solid rgb(255, 255, 255); /* Simulerar en blinkande markör */
-    white-space: nowrap;
+    white-space: nowrap; /* Gör att texten visas på en rad */
     overflow: hidden; /* Gömmer text utanför elementets bredd */
     width: 0;
     animation: typing 6s steps(30, end) infinite, blink-caret .75s step-end infinite;
@@ -183,7 +183,7 @@
 
     @keyframes typing{
       0% { width: 0; }
-      50% { width: 60%; } /* Full bredd vid 50% för att låta texten visas helt */
+      50% { width: 90%; } /* Full bredd vid 50% för att låta texten visas helt */
       100% { width: 0; } /* Återgår till 0 i slutet för att starta om */ 
     }
 

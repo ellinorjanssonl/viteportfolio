@@ -17,6 +17,14 @@
   color: #ffffff; /* Eller valfri textfärg */
   text-decoration: none;
   padding: 0.5rem 1rem;
+  border: 1px solid #82b3f7;
+  box-shadow: -1px 3px 3px rgba(160, 241, 255, 0.4);
+  border-radius: 15px;
+}
+
+.title:hover {
+  color: #6fcfff; /* Eller valfri hoverfärg */
+  text-decoration: none;
 }
 
 .rightContainer {
@@ -29,6 +37,11 @@
   display: flex; /* Hamburgarmenyn är alltid synlig */
   z-index: 1; /* Ser till att hamburgarmenyn är ovanpå menyn */
 }
+
+.hamburger:hover {
+  color: #6fcfff; /* Eller valfri hoverfärg */
+}
+
 .closeIcon {
   position: relative;
   top: 0;
@@ -36,12 +49,18 @@
   cursor: pointer;
   z-index: 100; /* Se till att krysset ligger över den utfällbara menyn */
 }
+
+.closeIcon:hover {
+  color: #6fcfff; /* Eller valfri hoverfärg */
+}
+
 .menu {
   position: absolute;
   display: none; /* Gömmer menyn initialt */
   right: 0;
   width: 120px; /* Bredd på den utfällbara menyn */
   text-align: center;
+  align-items: center;
   flex-direction: column;
   padding-top: 2rem; /* Utrymme för krysset */
   z-index: 99; /* Ser till att menyn är under hamburgarmenyn */

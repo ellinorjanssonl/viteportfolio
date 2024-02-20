@@ -29,7 +29,7 @@ export const Navbar = () => {
                 damping: 5
             }
         },
-        
+
         closed: { 
             opacity: 0,
             x: "100%",
@@ -62,10 +62,10 @@ export const Navbar = () => {
                     animate={isMenuOpen ? "open" : "closed"}
                 >
                     <ul className={styles.menuItems}>
-                        <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}><FontAwesomeIcon icon={faCode} />SKILLS</a></li>
-                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}><FontAwesomeIcon icon={faBriefcase} />PROJECTS</a></li>
-                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}><FontAwesomeIcon icon={faEnvelope} />CONTACT</a></li>
-                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}><FontAwesomeIcon icon={faHouse}/>ABOUT</a></li>
+                        <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}><FontAwesomeIcon icon={faCode} /><br />SKILLS</a></li>
+                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}><FontAwesomeIcon icon={faBriefcase} /><br />PROJECTS</a></li>
+                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}><FontAwesomeIcon icon={faEnvelope} /><br />CONTACT</a></li>
+                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}><FontAwesomeIcon icon={faHouse}/><br />ABOUT</a></li>
                     </ul>
                 </motion.div>
             </div>
