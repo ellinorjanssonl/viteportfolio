@@ -110,3 +110,39 @@
     background: #ff63f7;
   }
   
+  @media screen and (max-width: 768px) {
+    .contactForm textarea {
+      width: 80%;
+    }
+
+    .contactButton {
+      width: 50%;
+    }
+
+    .contactForm button {
+      width: 50%;
+    }
+
+    .contactInfo {
+      font-size: 0.75rem;
+    }
+
+    .contactHeader {
+      font-size: 1.5rem;
+    }
+
+    .socialMediaLinks a {
+      display: flex;
+      font-size: 1.5rem;
+      padding: 0.5rem 0.5rem;
+    }
+
+    .contactButton {
+      display: flex;
+      padding: 0.5rem 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      width: auto;
+    }
+
+  }
