@@ -30,8 +30,9 @@
   z-index: 100; /* Ser till att hamburgarmenyn är ovanpå menyn */
 }
 .closeIcon {
-  position: absolute;
-  font-size: 1.5rem;
+  position: relative;
+  top: 0;
+  font-size: 2rem;
   cursor: pointer;
   z-index: 101; /* Se till att krysset ligger över den utfällbara menyn */
 }
@@ -41,12 +42,10 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: 70vh; /* Fullskärmshöjd */
-  width: 200px; /* Bredd på den utfällbara menyn */
-  background-color: #201331; /* Ljus bakgrundsfärg för menyn */
+  width: 150px; /* Bredd på den utfällbara menyn */
+  background-color: transparent; /* Ljus bakgrundsfärg för menyn */
   flex-direction: column;
   padding-top: 4rem; /* Utrymme för krysset */
-  box-shadow: -4px 3px 5px rgba(86, 145, 255, 0.2); /* Lägg till skugga för djup */
   z-index: 99; /* Ser till att menyn är under hamburgarmenyn */
 }
 
@@ -60,14 +59,17 @@
   flex-direction: column;
   padding: 0;
   margin: 0;
+  border: 1px solid #82b3f7;
+  border-radius: 15px; /* Rundar hörnen på menyn */
+  box-shadow: -4px 1px 5px rgba(86, 145, 255, 0.2); /* Lägg till skugga för djup */
 }
 
 .menuItems li {
-  padding: 1rem;
-  border-bottom: 1px solid #ccc; /* Lägg till en tunn linje mellan varje länk */
+  padding: 2rem;
 }
 
 .menuItems a {
+  font-size: 15px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
