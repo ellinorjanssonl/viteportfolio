@@ -37,15 +37,13 @@
   z-index: 100; /* Se till att krysset ligger över den utfällbara menyn */
 }
 .menu {
+  position: absolute;
   display: none; /* Gömmer menyn initialt */
-  position: fixed;
-  top: 0;
   right: 0;
   width: 120px; /* Bredd på den utfällbara menyn */
   text-align: center;
-  background-color: transparent; /* Ljus bakgrundsfärg för menyn */
   flex-direction: column;
-  padding-top: 5rem; /* Utrymme för krysset */
+  padding-top: 2rem; /* Utrymme för krysset */
   z-index: 99; /* Ser till att menyn är under hamburgarmenyn */
 }
 .menu.active {
