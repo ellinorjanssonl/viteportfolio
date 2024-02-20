@@ -112,8 +112,9 @@
     padding: 0;
     margin: 0;
     border: 1px solid #82b3f7;
+    background-color: rgba(9, 26, 46, 0.8);
     border-radius: 15px; /* Rundar hörnen på menyn */
-    box-shadow: -4px 1px 5px rgba(86, 145, 255, 0.2); /* Lägg till skugga för djup */
+    box-shadow: -4px 1px 5px rgba(92, 192, 255, 0.3); /* Lägg till skugga för djup */
   }
 
   .menuItems li {
