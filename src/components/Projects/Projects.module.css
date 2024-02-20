@@ -13,7 +13,6 @@
   display: flex; /* Placerar alla projekt bredvid varandra */
   gap: 5%; /* Skapar utrymme mellan projekten */
   padding: 0 10px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */
- 
   
 }
 
@@ -72,51 +71,56 @@
   z-index: 1; /* Ser till att det förstorade projektet ligger ovanpå de andra */
 }
 
-/* Stil för scrollbars */
-::-webkit-scrollbar {
-  height: 8px; /* Ställer in höjden på scrollbaren */
-}
 
-::-webkit-scrollbar-track {
-  background-color: var(--color-bg) /* Färg på scrollbar-spåret */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-bg) /* Färg på scrollbar-thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #50c5ff; /* Färg på scrollbar-thumb när hovrad */
-}
-
-/* Media query för mindre skärmar */
 @media screen and (max-width: 768px) {
- .projectContainer {
-   flex-direction: column; /* Placerar projekten under varandra */
-   align-items: center; /* Centrerar projekten horisontellt */
-   padding: 0; /* Tar bort padding för bättre utseende */
-   gap: 2%;
- }
-
   .projects {
-    margin-top: 10%; /* Justera efter behov */
-    
-  } 
-
-  .projectContainer p {
-    margin-top: 5%;
-    font-size: 1.5rem; /* Justera textstorleken efter behov */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0;
   }
 
-  .projectContainer h3 {
-    margin-top: 0;
-    font-size: 2.5rem; /* Justera textstorleken efter behov */
-  }
   .project {
-    background-color: rgba(39, 76, 129, 0.2);
+    width: 100%; /* Anpassar bredden efter behov */
+    margin-bottom: 20px;
+    position: relative;
   }
 
+
+  .projectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projectContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project img {
+    width: 100%; /* Gör bilden fullbredd inom projektcontainern */
+    height: auto; /* Behåller bildens proportioner */
+    object-fit: cover; /* Säkerställer att bilden täcker området utan att förlora proportionerna */
+  }
+
+  .project:hover {
+    transform: none; /* Tar bort förstoringsanimationen vid hovring */
+  }
 }
+
+
 
 
 
