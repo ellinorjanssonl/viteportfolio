@@ -1,13 +1,15 @@
 @import "../../vars.css";
 
 .projects {
+  position: relative; /* Sätter .projects till en relativ position */
   display: flex;
-  overflow-x:visible; 
+  overflow-x: visible;
   margin-top: 10%;
   padding-left: 10%;
   padding-right: 10%;
-  
+  cursor: pointer;
 }
+
 
 .projectContainer {
   display: flex; /* Placerar alla projekt bredvid varandra */
@@ -59,7 +61,7 @@
   transition: transform 0.3s ease; /* Gör förstoringsanimationen mjuk */
   margin-bottom: 10%; /* Lägger till lite utrymme under projekten */
   margin-top: 5%;
-  background-color: rgba(39, 76, 129, 0.1);
+  background-color: rgba(64, 92, 145, 0.1);
 }
 
 .project img {
@@ -67,6 +69,7 @@
 }
 
 .project:hover {
+  background-color: rgba(40, 39, 88, 0.1);
   transform: scale(1.2); /* Förstorar projektet när det hovras över */
   z-index: 1; /* Ser till att det förstorade projektet ligger ovanpå de andra */
 }

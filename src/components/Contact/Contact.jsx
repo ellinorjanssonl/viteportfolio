@@ -1,25 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./Contact.module.css";
 
 export const Contact = () => {
+  const [comment, setComment] = useState(""); // Hantera användarens kommentar
+
+  // Hantera formulärets submit-händelse
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Exempel på att skicka data till Formspree
+    const form = new FormData();
+    form.append("message", comment);
+
+    fetch("https://formspree.io/f/myyrwayj", { // Ersätt 'yourFormId' med din faktiska Formspree ID
+      method: "POST",
+      body: form,
+      headers: {
+        'Accept': 'application/json'
+      },
+    })
+    .then(response => {
+      if (response.ok) {
+        response.status(200).send("Thank you!");
+        setComment(""); // Återställer kommentarfältet
+      } else {
+        alert("Please, try again!");
+      }
+    });
+  };
+
   return (
-    <div id="contact" className={styles.contactContainer}>
+    
+    <motion.div
+      id="contact"
+      className={styles.contactContainer}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <h1 className={styles.contactHeader}>Kontakta Mig</h1>
-      <div className={styles.contactInfo}>
-        <p><strong>E-post:</strong> dinemail@example.com</p>
-        <p><strong>Telefon:</strong> 123-456-7890</p>
-        <div className={styles.socialMediaLinks}>
-          <a href="https://www.linkedin.com/in/dinprofil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.github.com/dinanvändarnamn" target="_blank" rel="noopener noreferrer">Github</a>
-          <a href="https://www.facebook.com/dinprofil" target="_blank" rel="noopener noreferrer">Facebook</a>
-          {/* Lägg till fler länkar efter behov */}
-        </div>
+      <motion.div
+        className={styles.contactInfo}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        <p><strong>E-post:</strong> Ellinor_jansson@hotmail.com</p>
+        <p><strong>Telefon:</strong> +46 707836682</p>
+    
+      <div className={styles.socialMediaLinks}>
+        <a href="https://www.linkedin.com/in/dinprofil" target="_blank" rel="Linkedin">
+          
+        </a>
+        <a href="https://www.github.com/dinanvändarnamn" target="_blank" rel="Github">
+          
+        </a>
+        <a href="https://www.facebook.com/dinprofil" target="_blank" rel="Facebook">
+          
+        </a>
       </div>
-      <form className={styles.contactForm}>
+      </motion.div>
+      <form className={styles.contactForm} onSubmit={handleSubmit}>
         <label htmlFor="userComment">Din Kommentar</label>
-        <textarea id="userComment" name="comment" rows="4" placeholder="Skriv din kommentar här..."></textarea>
+        <textarea
+          id="userComment"
+          name="comment"
+          rows="4"
+          placeholder="Skriv din kommentar här..."
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+        ></textarea>
         <button type="submit">Skicka Kommentar</button>
       </form>
-    </div>
+    </motion.div>
   );
 };

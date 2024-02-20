@@ -1,0 +1,82 @@
+@import "../../vars.css";
+
+/* Contact.module.css */
+.contactContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  .contactHeader {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactInfo {
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .contactInfo p {
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+  
+  .socialMediaLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .socialMediaLinks a {
+    text-decoration: none;
+    color: #fff;
+    background: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .socialMediaLinks a:hover {
+    background: #0056b3;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contactForm label {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .contactForm textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .contactForm button {
+    cursor: pointer;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactForm button:hover {
+    background: #218838;
+  }
+  

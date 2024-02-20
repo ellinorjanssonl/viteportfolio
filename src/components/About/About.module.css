@@ -49,6 +49,7 @@
   }
 
   .imageBackground{
+    display: none;
     position: absolute;
     z-index: 0;
     filter: blur(100px);

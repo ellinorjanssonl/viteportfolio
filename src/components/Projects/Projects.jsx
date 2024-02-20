@@ -54,7 +54,7 @@ export const Projects = () => {
             transition: { type: "spring", stiffness: 100 }
         },
         whileHover: {
-            scale: width > 600 ? 1.1 : 1.05, // Mindre skalning på små skärmar
+            scale: width > 300 ? 1.1 : 1.05, // Mindre skalning på små skärmar
             transition: {
                 duration: 0.2,
                 ease: "easeInOut"
@@ -70,7 +70,7 @@ export const Projects = () => {
             className={styles.projects}
             initial="initial"
             animate="animate"
-            transition={{ staggerChildren: 0.2, delayChildren: 0.5 }}
+            transition={{ staggerChildren: 0.9, delayChildren: 0.5 }}
         >
             <div className={styles.projectContainer}>
                 {projects.map((project) => (
