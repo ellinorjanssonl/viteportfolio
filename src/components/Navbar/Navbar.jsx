@@ -5,6 +5,7 @@ import { faHouse, faEnvelope, faBriefcase, faCode, faTimes, faBars } from '@fort
 import { motion } from 'framer-motion';
 
 export const Navbar = () => {
+    // Definiera tillståndsvariabeln och funktionen för att uppdatera detta tillstånd
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleScroll = (sectionId) => {
@@ -15,10 +16,9 @@ export const Navbar = () => {
     };
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        setIsMenuOpen(!isMenuOpen); // Uppdaterar tillståndet baserat på dess nuvarande värde
     };
 
-    // Animationsinställningar för menyn
     const menuVariants = {
         open: { 
             opacity: 1,
@@ -29,6 +29,7 @@ export const Navbar = () => {
                 damping: 5
             }
         },
+        
         closed: { 
             opacity: 0,
             x: "100%",
@@ -71,7 +72,6 @@ export const Navbar = () => {
         </nav>
     );
 };
-
 
 
 

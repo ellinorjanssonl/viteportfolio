@@ -3,7 +3,7 @@ import styles from "./Skills.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGit, faNodeJs, faHtml5, faCss3Alt, faJs, faReact, faBootstrap} from "@fortawesome/free-brands-svg-icons";
 import { faDatabase, faCodeBranch, faImage} from "@fortawesome/free-solid-svg-icons";
-import { motion, useInView } from 'framer-motion'; // Lägg till import
+import { motion, useInView } from 'framer-motion'; 
 
 export const Skills = () => {
     const ref = React.useRef(null);

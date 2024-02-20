@@ -112,35 +112,3 @@
   }
 
 }
-
-@media screen and (max-width: 468px){
-  .diamond img {
-    max-width: 50%; /* Justera storleken på din diamantbild */
-  }
-  .list li {
-    padding: 0.5rem;
-    font-size: 0.5rem; /* Justera textstorleken efter behov */
-  }
-  .p {
-    font-size: 1rem; /* Justera textstorleken efter behov */
-  }
-  .flexContainer {
-    margin-top: 10%;
-  }
-  .pContainer {
-    margin-top: 10%;
-  }
-  .diamond {
-    margin-bottom: 20vh;
-  }
-
-  .list {
-    gap: 10px; /* Detta lägger till ett jämnt mellanrum mellan listobjekten */
-  }
-  .list li {
-    padding: 0.5rem;
-    font-size: 0.5rem; /* Justera textstorleken efter behov */
-  }
-
-  
-}
