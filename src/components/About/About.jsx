@@ -16,7 +16,7 @@ export const About = () => {
         <p className={styles.p}>
           I am a Frontend web developer with a passion for creating beautiful, user-friendly, and functional web applications. 
           I have a strong understanding of front-end development but has also done a lot of backend applications. 
-          I am a quick learner and am always looking to expand my knowledge and skills. 
+          I am a quick learner and Im always looking to expand my knowledge and skills. 
           I am excited to bring my creativity and technical skills to a team and help create amazing web applications.
          </p>
       </div>
