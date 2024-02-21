@@ -21,7 +21,6 @@
   .contactInfo p {
     font-size: 1rem;
     font-weight: bold;
-    line-height: 1.6;
     margin: 1rem 0;
   }
   
@@ -29,7 +28,8 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
   
   .socialMediaLinks a {
@@ -74,23 +74,25 @@
 
   .contactButton {
     align-content: center;
-    padding: 0.5rem 0.5rem;
-    font-size: 1rem;
+    padding: 1rem 2rem;
     border: none;
     color: var(--color-text);
     background-color: rgba(117, 211, 255, 0.1);
-    box-shadow: 1px 3px 5px rgba(108, 198, 254, 0.7);
-    font-size: 1rem;
+    box-shadow: 1px 2px 3px rgba(108, 198, 254, 0.7);
+    font-size: 0.75rem;
     border-radius: 15px;
     transition: background-color 0.7s ease;
     transition: transform 0.5s ease;
   }
 
-    .contactButton:hover {
+  .contactButton button {
+   
+  }
+
+  .contactButton:hover {
         transform: scale(1.1);
     }
 
-  
   .contactForm button {
     font-size: 1rem;
     font-weight: bold;

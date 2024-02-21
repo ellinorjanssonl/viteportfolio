@@ -45,13 +45,13 @@ export const Contact = () => {
       <p><strong>Phone number:</strong> +46 707836682</p>
 
       <div className={styles.socialMediaLinks}>
-        <a href="https://www.linkedin.com/in/dinprofil" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in//ellinor-jansson-lande-6680bb167/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} size="lg" />
         </a>
-        <a href="https://www.github.com/dinanvändarnamn" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.github.com/ellinorjanssonl" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
-        <a href="https://www.facebook.com/dinprofil" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/Ellinor.Jansson.Lande" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} size="lg" />
         </a>
         {!formVisible && ( // Button is only shown if formVisible is false
