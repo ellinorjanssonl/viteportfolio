@@ -41,6 +41,7 @@
 
 .projectLinks a {
   margin-bottom: 5%;
+  color: var(--color-text); /* Vit textfärg */
   background: #aa2eb3; /* Blå bakgrundsfärg */
   padding: 5px 20px; /* Justera efter behov */
   text-decoration: none; /* Tar bort understrykning */

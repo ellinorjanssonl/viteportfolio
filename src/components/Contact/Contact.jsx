@@ -69,7 +69,7 @@ export const Contact = () => {
           transition={{ duration: 1.5 }}
         >
           <form className={styles.contactForm} onSubmit={handleSubmit}>
-            <label htmlFor="userComment">Leave a comment!</label>
+            <label htmlFor="userComment">Send a comment to me!</label>
             <textarea
               id="userComment"
               name="comment"

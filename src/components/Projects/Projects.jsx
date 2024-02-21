@@ -24,19 +24,25 @@ export const Projects = () => {
             id: 1,
             title: "Project 1",
             description: "This is a project where you can see the latest movies. I used React, Node.js, Express, html and css. I also made a page where you can see the movies you have saved and download it in case there is no wifi.",
-            imageUrl: "Illustration.png"
+            imageUrl: "Illustration.png",
+            githubUrl: "https://github.com/ellinorjanssonl",
+            websiteUrl: "https://movies-search-mu.vercel.app/"
         },
         {
             id: 2,
             title: "Project 2",
             description: "This is a news site where you can read the latest news. I used React, Node.js, Express, html and css. I also made a page where you can see the news you have saved.",
-            imageUrl: "Ilustrationbottom.png"
+            imageUrl: "Ilustrationbottom.png",
+            githubUrl: "https://github.com/ellinorjanssonl",
+            websiteUrl: "https://news-store.vercel.app/"
         },
         {
             id: 3,
             title: "Project 3",
             description: "This is a project is a webshop for a company that sells clothes. I used React, Node.js, Express, html and css.  I also made a page where you can see your orders and a page where you can see the products you have in your cart",
-            imageUrl: "Illustrationtop.png"
+            imageUrl: "Illustrationtop.png",
+            githubUrl: "https://github.com/ellinorjanssonl",
+            websiteUrl: "https://webshop-self.vercel.app/"
         },
         // Lägg till fler projekt efter behov
     ];
