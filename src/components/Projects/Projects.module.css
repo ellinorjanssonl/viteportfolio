@@ -14,8 +14,7 @@
 .projectContainer {
   display: flex; /* Placerar alla projekt bredvid varandra */
   gap: 5%; /* Skapar utrymme mellan projekten */
-  padding: 0 10px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */
-  
+  padding: 0 10px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */ 
 }
 
 .projectContainer h3, p {
