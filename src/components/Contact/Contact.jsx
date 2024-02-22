@@ -45,12 +45,12 @@ export const Contact = () => {
   };
 
     return (
-      <div id="contact" className={styles.contact}>
+      <div id="contact" className={styles.contactcontainer}>
       
       <motion.div
         ref={ref}
         initial={{ y: 200, opacity: 0 }} // Börjar positionen lite nedåt och opaciteten som 0
-        animate={{ y: inView ? 0 : 50, opacity: inView ? 1 : 0 }} // När inView är true, rör sig till y: 0 och opaciteten till 1
+        animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }} // När inView är true, rör sig till y: 0 och opaciteten till 1
         transition={{ duration: 1 }} // Längden på övergången
         className={styles.contact}
       >

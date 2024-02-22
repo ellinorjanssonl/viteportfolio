@@ -1,16 +1,19 @@
 @import "../../vars.css";
 
 .contact {
-    margin: 0 auto;
+   border: 1px solid #ffffff;
+   border-radius: 15px;
+    margin: 0 20%;
     padding: 2rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+
   }
   
   .contactHeader {
-    border: 1px solid #ffffff;
     letter-spacing: 5px;
     margin: 0 20%;
-    padding: 1rem;
-    border-radius: 15px;
+    padding: 1rem; 
     font-size:3rem;
     font-weight: 900;
     text-align: center;
@@ -66,7 +69,7 @@
   
   .contactForm textarea {
     background-color: #ffffff;
-    width: 30%;
+    width: 50%;
     align-self: center;
     font-size: 1rem;
     font-weight: bold;
@@ -83,7 +86,7 @@
     padding: 12px;
     border: none;
     color: var(--color-text);
-    background-color: rgb(31, 22, 51);
+    background-color: transparent;
     border: 1px solid rgba(108, 198, 254, 0.7);
     font-size: 1rem;
     font-weight: bold;
@@ -112,7 +115,7 @@
     font-weight: bold;
     align-self: center;
     cursor: pointer;
-    width: 10%;
+    width: 20%;
     background: #76caff;
     color: var(--color-bg);
     border: none;
@@ -127,6 +130,11 @@
   }
   
   @media screen and (max-width: 768px) {
+    
+    .contact {
+      margin: 0 10%;
+    }
+    
     .contactForm textarea {
       width: 70%;
     }
@@ -136,7 +144,9 @@
     }
 
     .contactHeader {
-      font-size: 3.5rem;
+      font-size: 2rem;
+      margin: 0 1%;
+      margin-bottom: 1rem;
     }
 
     .socialMediaLinks a {
