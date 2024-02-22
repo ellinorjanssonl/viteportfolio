@@ -1,6 +1,7 @@
 @import "../../vars.css";
 
 .about {
+    padding-top: 2rem;
     display: flex;
     flex-direction: row; /* Ändra till row för att placera innehållet horisontellt */
     align-items: center; /* Centrerar objekten vertikalt */
