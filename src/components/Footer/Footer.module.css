@@ -1,0 +1,10 @@
+.footerStyle {
+background-color: #2b1f46;
+height: 50px;
+}
+
+.footerStyle p {
+    font-size: 0.75rem;
+    padding-top: 1rem;
+    color: rgba(155, 223, 255, 0.9);
+}

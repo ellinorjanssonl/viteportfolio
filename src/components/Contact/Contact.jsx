@@ -54,11 +54,11 @@ export const Contact = () => {
         <a href="https://www.facebook.com/Ellinor.Jansson.Lande" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} size="lg" />
         </a>
-        {!formVisible && ( // Button is only shown if formVisible is false
-        <button onClick={toggleFormVisibility} className={styles.contactButton}>Want to leave a comment?</button>
-      )}
       </div>
-
+      {!formVisible && ( // Button is only shown if formVisible is false
+         <><p className={styles.buttomP}> Want to leave a comment? </p> 
+         <button onClick={toggleFormVisibility} className={styles.contactButton}>Click me!</button></>   
+        )}
      
 
       {formVisible && (
