@@ -10,7 +10,6 @@
   cursor: pointer;
 }
 
-
 .projectContainer {
   display: flex; /* Placerar alla projekt bredvid varandra */
   gap: 5%; /* Skapar utrymme mellan projekten */
@@ -82,6 +81,7 @@
     align-items: center;
     justify-content: center;
     margin: 5% 0;
+    margin-top: 20%;
   }
 
   .project {
