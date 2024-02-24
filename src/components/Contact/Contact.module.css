@@ -1,166 +1,204 @@
 @import "../../vars.css";
 
-.contact {
-   border: 1px solid #ffffff;
-   border-radius: 15px;
-    margin: 0 20%;
-    padding: 2rem;
-    padding-bottom: 3rem;
-    margin-bottom: 2rem;
+.contactMe {
+  justify-content: center;
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Staplar barnen vertikalt */
+  margin-top: 5%; /* Lägger till lite utrymme ovanför `contactMe` */
+}
+.contactContainer {
+  display: flex; /* Aktiverar Flexbox */
+  flex: 1; /* Låter containeren ta upp allt tillgängligt utrymme */
+  flex-direction: column; /* Staplar barnen vertikalt */
+  margin: 0 10%; /* Ger lite utrymme runt containeren */
+  padding-bottom: 2rem; /* Lägger till lite utrymme nedtill */
+}
 
-  }
-  
-  .contactHeader {
-    letter-spacing: 5px;
-    margin: 0 20%;
-    padding: 1rem; 
-    font-size:3rem;
-    font-weight: 900;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
-  
-  .contactInfo {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: #ffffff;
-  }
-  
-  .contactInfo p {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 1rem 0;
-  }
-  
-  .socialMediaLinks {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .socialMediaLinks a {
-    text-decoration: none;
-    font-size: 2rem;
-    color:#76caff;
-    padding: 0.75rem 1rem;
-    border-radius: 15px;
-    transition: background-color 0.7s ease;
-    transition: transform 0.5s ease;
-  }
-  
-  .socialMediaLinks a:hover {
-    color:#ff63f7;
-    transform: scale(1.2);
-  }
-  
+.socialMediaLinks a {
+  color: #82daf7; /* Ändrar bakgrundsfärgen på länkarna */
+}
+
+.socialMediaLinks a:hover {
+  color: #ff6fe5; /* Ändrar bakgrundsfärgen på länkarna vid hovring */
+  transform: scale(1.2); /* Förstorar länkarna vid hovring */
+}
+
+.contactInfo p {
+  width: 100%; 
+  display: flex; /* Gör att vi kan använda flexbox-egenskaper */
+  flex-direction: column; /* Staplar barnen vertikalt */
+}
+
+.contactHeader {
+  margin-bottom: 3rem; /* Lägger till lite utrymme under rubriken */
+  font-weight: bold; /* Gör rubriken fet */
+  text-align: center;
+  font-size: 3.5rem; /* Storleken på rubriken */
+}
+
+.socialMediaLinks {
+  display: flex; /* Fortsätter att använda flex för att arrangera länkarna horisontellt */
+  justify-content: center; /* Centrerar länkarna */
+  gap: 2rem; /* Lägger till utrymme mellan länkarna */
+  font-size: 2.5rem; /* Storleken på ikonerna */
+}
+
+.contactButton {
+  align-self: center; /* Centrerar knappen i `contactInfo` */
+  /* Behåll andra stilar som du redan har definierat */
+}
+
+.flexContainer {
+  display: flex; /* Aktiverar Flexbox */
+  width: 100%; /* Gör att containeren tar upp hela bredden */
+  justify-content: space-between; /* Lägger till utrymme mellan barnen */
+  align-items: center; /* Centrerar barnen vertikalt */
+}
+
+.contactInfo, .imagepic {
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Staplar barnen vertikalt */
+  flex: 1;
+  margin: 0; /* Ger lite utrymme mellan elementen */
+}
+
+.imagepic {
+  align-items: center; /* Centrerar bilden horisontellt */
+  margin-left: 10%;
+}
+
+.contactInfo {
+  margin-right: 10%; /* Ger lite utrymme mellan elementen */
+}
+
+.imagepic img {
+  margin-right: 10%; 
+  width: 80%; /* Gör bilden responsiv inom sin container */
+  height: auto; /* Behåller bildens proportioner */
+  border-radius: 15px; /* Rundar hörnen på bilden */
+}
+
+.contactFormContainer {
+  display:flex;
+  width: 100%; /* Gör att containeren tar upp hela bredden */
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction:column; /* Staplar barnen vertikalt */
+  gap: 10px; /* Lägger till lite utrymme mellan elementen */
+  padding: 0 10%; /* Lägger till lite utrymme runt containeren */
+  padding-bottom: 2rem; /* Lägger till lite utrymme nedtill */
+  padding-top: 2rem; /* Lägger till lite utrymme upptill */
+}
+
+.contactForm {
+  text-align: center; /* Centrerar formuläret */
+  row-gap: 10px; /* Lägger till lite utrymme mellan raderna */
+  width: 50%; /* Gör att formuläret tar upp hela bredden */
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Staplar barnen vertikalt */
+}
+
+.formRightAlign {
+  display: flex;
+  justify-content: center; /* Placerar innehållet till höger */
+}
+
+.contactForm input, .contactForm textarea{
+  padding: 0.5rem; /* Lägger till lite utrymme runt inputfälten */
+  border: 2px solid #fbfdff; /* Lägger till en ram runt inputfälten */
+  background-color: #82daf7; /* Ändrar bakgrundsfärgen på inputfälten */
+  border-radius: 15px; /* Rundar hörnen på inputfälten */
+  width: 100%; /* Gör att inputfälten tar upp hela bredden */
+}
+
+.contactForm button {
+  padding: 0.5rem; /* Lägger till lite utrymme runt knappen */
+  border: 2px solid #ffffff; /* Lägger till en ram runt knappen */
+  border-radius: 15px; /* Rundar hörnen på knappen */
+  width: 40%; /* Gör att knappen tar upp hela bredden */
+  background-color: #82daf7; /* Ändrar bakgrundsfärgen på knappen */
+  color: var(--color-bg); /* Ändrar textfärgen på knappen */
+  font-weight: bold; /* Gör texten fet */
+  cursor: pointer; 
+  align-self: center;
+  transition: background-color 0.7s; /* Gör bakgrundsfärgsändringen mjuk */
+}
+
+.contactForm button:hover {
+  background-color: #ff6fe5; /* Ändrar bakgrundsfärgen på knappen vid hovring */
+}
+
+.ButtomP{
+  display: flex; /* Aktiverar Flexbox */
+  justify-content: center; /* Centrerar knappen */
+  padding-top: 2rem; /* Lägger till lite utrymme ovanför knappen */
+}
+
+.contactButton {
+  padding: 0.5rem; /* Lägger till lite utrymme runt knappen */
+  border: none;
+  border-radius: 15px; /* Rundar hörnen på knappen */
+  width: 50%; /* Gör att knappen tar upp hela bredden */
+  background-color: #82daf7; /* Ändrar bakgrundsfärgen på knappen */
+  color: var(--color-bg); /* Ändrar textfärgen på knappen */
+  font-weight: bold; /* Gör texten fet */
+  cursor: pointer; 
+  align-self: center;
+  transition: background-color 0.7s; /* Gör bakgrundsfärgsändringen mjuk */
+}
+
+.contactButton:hover {
+  background-color: #ff6fe5; /* Ändrar bakgrundsfärgen på knappen vid hovring */
+  transform: scale(1.2); /* Förstorar knappen vid hovring */
+}
+
+@media screen and (max-width: 768px) {
   .contactForm {
-    display: flex;
-    flex-direction: column;
+    width: 100%; /* Gör att formuläret tar upp hela bredden */
   }
-  
-  .contactForm label {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: #ffffff;
+  .imagepic {
+    display: none; /* Gömmer bilden på mindre skärmar */
   }
-  
-  .contactForm textarea {
-    background-color: #ffffff;
-    width: 50%;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #0e091e;
-    border-radius: 15px;
-    resize: vertical;
+  .contactInfo {
+    margin-right: 0; /* Tar bort utrymme mellan elementen */
   }
-
+  .contactFormContainer {
+    padding: 0; /* Tar bort utrymme runt containeren */
+  }
+ 
+  .ButtomP {
+    padding-top: 2rem; /* Tar bort utrymme ovanför knappen */
+  }
+  .contactContainer {
+    margin: 0; /* Tar bort utrymme runt containeren */
+  }
+  .contactHeader {
+    font-size: 2.5rem; /* Storleken på rubriken */
+  }
+  .contactMe {
+    margin-top: 0; /* Tar bort utrymme ovanför `contactMe` */
+  }
+  .socialMediaLinks {
+    gap: 1rem; /* Lägger till lite utrymme mellan länkarna */
+    font-size: 2rem; /* Storleken på ikonerna */
+  }
+  .contactInfo p {
+    text-align: center; /* Centrerar texten */
+  }
+  .contactInfo {
+    margin-right: 0; /* Tar bort utrymme mellan elementen */
+  }
+  .contactFormContainer {
+    padding: 0; /* Tar bort utrymme runt containeren */
+  }
   .contactButton {
-    display: flex;
-    margin: 0 auto;
-    padding: 12px;
-    border: none;
-    color: var(--color-text);
-    background-color: transparent;
-    border: 1px solid rgba(108, 198, 254, 0.7);
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 15px;
-    transition: background-color 0.7s ease;
-    transition: transform 0.5s ease;
+    width: 40%; 
   }
-
-  .contactButton:hover {
-    background-color: #ff63f7;
-    color: var(--color-bg);
+  .contactForm input, .contactForm textarea {
+    align-self: center; /* Centrerar inputfälten */
+    width: 50%; /* Gör att inputfälten tar upp hela bredden */
   }
-   
-  .buttomP {
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-  }
-
-  .contactButton:hover {
-        transform: scale(1.1);
-    }
-
   .contactForm button {
-    font-size: 1rem;
-    font-weight: bold;
-    align-self: center;
-    cursor: pointer;
-    width: 20%;
-    background: #76caff;
-    color: var(--color-bg);
-    border: none;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 15px;
-    transition: background-color 0.3s ease;
+    align-self: center; /* Centrerar knappen */
+    width: 20%; /* Gör att knappen tar upp hela bredden */
   }
-  
-  .contactForm button:hover {
-    background: #ff63f7;
-  }
-  
-  @media screen and (max-width: 768px) {
-    
-    .contact {
-      margin: 0 10%;
-    }
-    
-    .contactForm textarea {
-      width: 70%;
-    }
-
-    .contactForm button {
-      width: 20%;
-    }
-
-    .contactHeader {
-      font-size: 2rem;
-      margin: 0 1%;
-      margin-bottom: 1rem;
-    }
-
-    .socialMediaLinks a {
-      display: flex;
-      font-size: 2.5rem;
-      padding: 0.5rem 0.5rem;
-    }
-
-    .contactButton {
-      display: flex;
-      padding: 0.5rem 0.5rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-      width: auto;
-    }
-
-  }
+}
