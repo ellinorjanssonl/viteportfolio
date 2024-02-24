@@ -217,3 +217,31 @@
     width: 20%; /* Gör att knappen tar upp hela bredden */
   }
 }
+
+@media screen and (max-width: 468px){
+
+  .contactForm input, .contactForm textarea {
+    width: 80%; /* Gör att inputfälten tar upp hela bredden */
+  }
+ 
+  .contactHeader h1 {
+    font-size: 2rem; /* Storleken på rubriken */
+  }
+  .socialMediaLinks {
+    gap: 1rem; /* Lägger till lite utrymme mellan länkarna */
+    font-size: 2rem; /* Storleken på ikonerna */
+  }
+  .contactInfo p {
+    font-size: 1rem; /* Storleken på texten */
+  }
+  .contactButton {
+    width: 40%; /* Gör att knappen tar upp hela bredden */
+  }
+  .contactForm button {
+    width: 40%; /* Gör att knappen tar upp hela bredden */
+  }
+  .contactForm input, .contactForm textarea {
+    width: 80%; /* Gör att inputfälten tar upp hela bredden */
+  }
+}
+
