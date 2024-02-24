@@ -46,6 +46,7 @@ export const Contact = () => {
 
 return (
   <div id="contact" className={styles.contactContainer}>
+   
       
       <motion.div
         ref={ref}
@@ -54,8 +55,11 @@ return (
         transition={{ duration: 1 }} // Längden på övergången
         className={styles.contactMe}
        >
-    
-        <h1 className={styles.contactHeader}>CONTACT ME!</h1>
+      
+   
+       <div className={styles.contactHeader}><h1>CONTACT ME!</h1>
+      <img src="/Illustration.png" alt="planet" />
+        </div>
           <div className={styles.flexContainer}> 
             <div className={styles.imagepic}>
               <img src="/linkedin.jpg" alt="contactmepic" />

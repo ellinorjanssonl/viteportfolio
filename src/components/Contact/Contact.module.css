@@ -1,12 +1,13 @@
 @import "../../vars.css";
 
 .contactMe {
+  z-index: 10; 
   justify-content: center;
   display: flex; /* Aktiverar Flexbox */
   flex-direction: column; /* Staplar barnen vertikalt */
   margin-top: 5%; /* Lägger till lite utrymme ovanför `contactMe` */
 }
-.contactContainer {
+.contactContainer { 
   display: flex; /* Aktiverar Flexbox */
   flex: 1; /* Låter containeren ta upp allt tillgängligt utrymme */
   flex-direction: column; /* Staplar barnen vertikalt */
@@ -30,10 +31,23 @@
 }
 
 .contactHeader {
-  margin-bottom: 3rem; /* Lägger till lite utrymme under rubriken */
+  display: flex; /* Aktiverar Flexbox */
+  align-items: center; /* Centrerar rubriken vertikalt */
+  justify-content: center; /* Centrerar rubriken horisontellt */
+  margin-bottom: 1rem; /* Lägger till lite utrymme under rubriken */
+ 
+}
+.contactHeader img {
+  width: 20%; /* Gör bilden responsiv */
+  height: auto; /* Behåller bildens proportioner */
+  margin-right: 1rem; /* Lägger till lite utrymme mellan bilden och texten */
+}
+
+.contactHeader h1 {
   font-weight: bold; /* Gör rubriken fet */
   text-align: center;
   font-size: 3.5rem; /* Storleken på rubriken */
+  color: var(--color-text); /* Färgen på rubriken */
 }
 
 .socialMediaLinks {
@@ -151,6 +165,7 @@
   transform: scale(1.2); /* Förstorar knappen vid hovring */
 }
 
+
 @media screen and (max-width: 768px) {
   .contactForm {
     width: 100%; /* Gör att formuläret tar upp hela bredden */
@@ -171,8 +186,8 @@
   .contactContainer {
     margin: 0; /* Tar bort utrymme runt containeren */
   }
-  .contactHeader {
-    font-size: 2.5rem; /* Storleken på rubriken */
+  .contactHeader h1 {
+    font-size: 3rem; /* Storleken på rubriken */
   }
   .contactMe {
     margin-top: 0; /* Tar bort utrymme ovanför `contactMe` */
