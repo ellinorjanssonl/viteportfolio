@@ -67,6 +67,7 @@ return (
                 <div className={styles.contactInfo}>
                   <p><strong>E-mail:</strong> Ellinor_jansson@hotmail.com</p>
                     <p><strong>Phone number:</strong> +46 707836682</p>
+                      <p><strong>Location:</strong> Stockholm, Sweden</p>
         
   
                     <div className={styles.socialMediaLinks}>

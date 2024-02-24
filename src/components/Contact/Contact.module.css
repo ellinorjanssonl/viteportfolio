@@ -83,16 +83,17 @@
 }
 
 .contactInfo {
-  margin-right: 10%; /* Ger lite utrymme mellan elementen */
+  font-size: 1rem; /* Storleken på texten */
+  padding: 0 5%; /* Lägger till lite utrymme runt containeren */
 }
 
 .imagepic img {
   margin-right: 10%; 
   border: 1px solid #1b113a; /* Lägger till en ram runt bilden */
   box-shadow: 1px 2px 10px 2px rgba(108, 222, 254, 0.7); /* Lägger till en lätt skugga för djup */
-  width: 80%; /* Gör bilden responsiv inom sin container */
+  width: 100%; /* Gör bilden responsiv inom sin container */
   height: auto; /* Behåller bildens proportioner */
-  border-radius: 15px; /* Rundar hörnen på bilden */
+  border-radius: 50%; /* Rundar hörnen på bilden */
 }
 
 .contactFormContainer {
