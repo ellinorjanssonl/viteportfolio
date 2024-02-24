@@ -17,6 +17,7 @@
 
 .socialMediaLinks a {
   color: #82daf7; /* Ändrar bakgrundsfärgen på länkarna */
+  transition: color 0.5s ease, transform 0.5s ease; 
 }
 
 .socialMediaLinks a:hover {
@@ -136,7 +137,7 @@
   font-weight: bold; /* Gör texten fet */
   cursor: pointer; 
   align-self: center;
-  transition: background-color 0.7s; /* Gör bakgrundsfärgsändringen mjuk */
+  transition: color 0.5s ease, transform 0.5s ease; 
 }
 
 .contactForm button:hover {
@@ -159,7 +160,7 @@
   font-weight: bold; /* Gör texten fet */
   cursor: pointer; 
   align-self: center;
-  transition: background-color 0.7s; /* Gör bakgrundsfärgsändringen mjuk */
+  transition: color 0.5s ease, transform 0.5s ease; 
 }
 
 .contactButton:hover {
