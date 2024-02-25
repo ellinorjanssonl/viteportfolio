@@ -8,6 +8,7 @@
 }
 
 .leftContainer {
+  margin-top: 1rem;
   display: flex;
   align-items: center;
 }
@@ -21,6 +22,8 @@
   box-shadow: -1px 3px 3px rgba(160, 241, 255, 0.4);
   border-radius: 15px;
 }
+
+
 
 .title:hover {
   color: #6fcfff; /* Eller valfri hoverfärg */

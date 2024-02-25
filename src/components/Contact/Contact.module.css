@@ -5,7 +5,6 @@
   justify-content: center;
   display: flex; /* Aktiverar Flexbox */
   flex-direction: column; /* Staplar barnen vertikalt */
-  margin-top: 5%; /* Lägger till lite utrymme ovanför `contactMe` */
   margin-bottom: 5%; /* Lägger till lite utrymme under `contactMe` */
 }
 .contactContainer { 
@@ -46,7 +45,6 @@
 }
 
 .contactHeader h1 {
-  font-weight: bold; /* Gör rubriken fet */
   text-align: center;
   font-size: 4rem; /* Storleken på rubriken */
   color: var(--color-text); /* Färgen på rubriken */

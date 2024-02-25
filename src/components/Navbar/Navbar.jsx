@@ -46,16 +46,19 @@ export const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.leftContainer}>
                 <a className={styles.title} href="/cv.pdf" download="CV_Ellinor_Jansson_Lande.pdf">Download CV</a>
-            </div>
+                  </div>
+           
             <div className={styles.rightContainer}>
                 {isMenuOpen && (
                     <div className={styles.closeIcon} onClick={toggleMenu}>
-                        <FontAwesomeIcon icon={faTimes} />
-                    </div>
-                )}
-                <div className={styles.hamburger} onClick={toggleMenu}>
-                    {!isMenuOpen && <FontAwesomeIcon icon={faBars} />}
-                </div>
+                      <FontAwesomeIcon icon={faTimes} />
+                         </div>
+                        )}
+
+              <div className={styles.hamburger} onClick={toggleMenu}>
+                {!isMenuOpen && <FontAwesomeIcon icon={faBars} />}
+                  </div>
+               
                 <motion.div
                     className={`${styles.menu} ${isMenuOpen ? styles.show : ''}`}
                     variants={menuVariants}

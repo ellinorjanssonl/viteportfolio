@@ -5,15 +5,14 @@
     display: flex;
     flex-direction: row; /* Ändra till row för att placera innehållet horisontellt */
     align-items: center; /* Centrerar objekten vertikalt */
-    justify-content: center; /* Centrerar objekten horisontellt */
-    margin: 0 10%;
-    gap: 20px; /* Lägger till lite utrymme mellan textContainer och imageContainer */
+    justify-content:space-between; /* Centrerar objekten horisontellt */
+    margin: 0 7%;
+    gap: 3rem; /* Lägger till lite utrymme mellan textContainer och imageContainer */
   }
   
   .textContainer {
     z-index: 1;
     flex: 1; /* Ger textContainer flexibilitet att expandera */
-    padding: 0 2%; /* Lägger till lite padding för bättre utseende */
   }
   
   .ellinor {
@@ -23,7 +22,7 @@
     flex: 1; /* Ger imageContainer flexibilitet att expandera */
     display: flex;
     justify-content: center; /* Centrerar bilden i containern */
-    padding: 0 2%; /* Lägger till lite padding för bättre utseende */
+    padding: 0 1%; /* Lägger till lite padding för bättre utseende */
     overflow: hidden; /* Förhindrar att innehållet utanför containeren visas */
   }
 
@@ -35,7 +34,6 @@
       transform: translateY(-20px); /* Flyttar upp elementet 20px */
     }
   }
-  
   
   .imageContainer img {
     z-index: 1; /* Placerar bilden över texten */
@@ -50,12 +48,10 @@
   }
 
   .imageBackground{
-    display: none;
     position: absolute;
     z-index: 0;
-    filter: blur(100px);
+    filter: blur(150px);
   }
-
 
   .h1 {
     font-size: 3rem;
@@ -100,25 +96,6 @@
     }
   }
 
-  @keyframes typing {
-    0% { width: 0; }
-    50% { width: 80%; } /* Full bredd vid 50% för att låta texten visas helt */
-    100% { width: 0; } /* Återgår till 0 i slutet för att starta om */
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: rgb(255, 255, 255); } 
-  }
-  
-  .typing-effect {
-    border-right: 1px solid rgb(255, 255, 255); /* Simulerar en blinkande markör */
-    white-space: nowrap; /* Gör att texten visas på en rad */
-    overflow: hidden; /* Gömmer text utanför elementets bredd */
-    width: 0;
-    animation: typing 6s steps(30, end) infinite, blink-caret .75s step-end infinite;
-  }
-  
   .slidingText {
     animation: slideInFromLeft 1s ease-out forwards;
   }
@@ -129,8 +106,11 @@
 
   @media screen and (max-width: 768px) {
     .about {
+      padding-top: 1rem;
       flex-direction: column; /* Ändra till column för att placera innehållet vertikalt */
       gap: 10px; /* Lägger till lite utrymme mellan textContainer och imageContainer */
+      margin: 0 5%;
+      text-align: center;
     }
 
     .textContainer {
@@ -149,8 +129,7 @@
       font-size: 2rem;
       align-items: center;
       text-align: center;
-      justify-content: center;
-      margin-top: 5%;
+      width: 100%;
     }
 
     .h2 {
@@ -161,9 +140,10 @@
     }
 
     .p {
-      text-align: center; /* Justerar texten till vänster */
-      align-items: center;
-      justify-content: center;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding-bottom: 5%;
     }
 
 
@@ -179,18 +159,13 @@
       background-position: center; /* Centrerar bilden */
     }
 
-    .typing-effect {
-      animation: typing 6s steps(30, end) infinite, blink-caret .75s step-end infinite;
-    }
-
-    @keyframes typing{
-      0% { width: 0; }
-      50% { width: 90%; } /* Full bredd vid 50% för att låta texten visas helt */
-      100% { width: 0; } /* Återgår till 0 i slutet för att starta om */ 
-    }
-
-    .slidingText {
-      animation: slideInFromLeft 1s ease-out forwards;
+   .motiondiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 5% 0;
+      padding-top: 20%;
     }
     
   }

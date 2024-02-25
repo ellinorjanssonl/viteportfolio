@@ -61,9 +61,16 @@ return (
       <img src="/Illustration.png" alt="planet" />
         </div>
           <div className={styles.flexContainer}> 
-            <div className={styles.imagepic}>
-              <img src="/linkedin.jpg" alt="contactmepic" />
-            </div>
+         
+          <motion.div
+           initial={{ scale: 0.3, opacity: 0 }} // Startar från en mindre skala och osynlig
+            animate={{ scale: 1, opacity: 1 }} // Animerar till full skala och full synlighet
+             transition={{ duration: 1, delay: 0 }} // Definiera duration och delay för animationen
+              className={styles.imagepic}
+          >
+               <img src="/linkedin.jpg" alt="contactmepic" />
+           </motion.div>
+
                 <div className={styles.contactInfo}>
                   <p><strong>E-mail:</strong> Ellinor_jansson@hotmail.com</p>
                     <p><strong>Phone number:</strong> +46 707836682</p>
