@@ -100,7 +100,6 @@
   }
 
   .projectContent {
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -119,7 +118,7 @@
   }
 
   .project:hover {
-    transform: none; /* Tar bort förstoringsanimationen vid hovring */
+    transform: scale(1.1); /* Förstorar projektet när det hovras över */
   }
 }
 
