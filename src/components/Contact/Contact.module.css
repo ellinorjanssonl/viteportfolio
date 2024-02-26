@@ -46,7 +46,8 @@
 
 .contactHeader h1 {
   text-align: center;
-  font-size: 4rem; /* Storleken på rubriken */
+  font-size: 2.5rem; /* Storleken på rubriken */
+  letter-spacing: 0.1rem; /* Lägger till lite utrymme mellan bokstäverna */
   color: var(--color-text); /* Färgen på rubriken */
 }
 
