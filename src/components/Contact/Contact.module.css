@@ -1,21 +1,35 @@
 @import "../../vars.css";
 
 .contactMe {
-  z-index: 10; 
+  background-image: url("/public/Mountains.png"); /* Lägger till en bakgrundsbild */
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #181136; /* Lägger till en ram runt containeren */
+  box-shadow: 1px 2px 3px 2px rgba(108, 222, 254, 0.7); /* Lägger till en lätt skugga för djup */
+  border-radius: 30px; /* Rundar hörnen på containeren */
+  z-index: 100; 
   justify-content: center;
   display: flex; /* Aktiverar Flexbox */
   flex-direction: column; /* Staplar barnen vertikalt */
   margin-bottom: 5%; /* Lägger till lite utrymme under `contactMe` */
+  margin: 0 10%; /* Lägger till lite utrymme runt containeren */
 }
 .contactContainer { 
+  
+  z-index: 100; 
   display: flex; /* Aktiverar Flexbox */
   flex: 1; /* Låter containeren ta upp allt tillgängligt utrymme */
   flex-direction: column; /* Staplar barnen vertikalt */
-  margin: 0 10%; /* Ger lite utrymme runt containeren */
-  padding-bottom: 2rem; /* Lägger till lite utrymme nedtill */
+  margin-bottom: 1rem; /* Lägger till lite utrymme nedtill */
+}
+
+.contactInfo img {
+  position: absolute;
+  z-index: 0;
 }
 
 .socialMediaLinks a {
+  z-index: 100; 
   color: #82daf7; /* Ändrar bakgrundsfärgen på länkarna */
   transition: color 0.5s ease, transform 0.5s ease; 
 }
@@ -26,22 +40,20 @@
 }
 
 .contactInfo p {
+  z-index: 100; 
   width: 100%; 
   display: flex; /* Gör att vi kan använda flexbox-egenskaper */
   flex-direction: column; /* Staplar barnen vertikalt */
 }
 
 .contactHeader {
+  padding-top: 2rem;
+  z-index: 100; 
   display: flex; /* Aktiverar Flexbox */
   align-items: center; /* Centrerar rubriken vertikalt */
   justify-content: center; /* Centrerar rubriken horisontellt */
   margin-bottom: 1rem; /* Lägger till lite utrymme under rubriken */
  
-}
-.contactHeader img {
-  width: 20%; /* Gör bilden responsiv */
-  height: auto; /* Behåller bildens proportioner */
-  margin-right: 1rem; /* Lägger till lite utrymme mellan bilden och texten */
 }
 
 .contactHeader h1 {
@@ -52,6 +64,7 @@
 }
 
 .socialMediaLinks {
+  z-index: 100; 
   display: flex; /* Fortsätter att använda flex för att arrangera länkarna horisontellt */
   justify-content: center; /* Centrerar länkarna */
   gap: 2rem; /* Lägger till utrymme mellan länkarna */
@@ -80,6 +93,7 @@
 .imagepic {
   align-items: center; /* Centrerar bilden horisontellt */
   margin-left: 10%;
+  padding-bottom: 2rem; /* Lägger till lite utrymme nedtill */
 }
 
 .contactInfo {
@@ -116,7 +130,7 @@
 
 .formRightAlign {
   display: flex;
-  justify-content: center; /* Placerar innehållet till höger */
+  justify-content: center; 
 }
 
 .contactForm input, .contactForm textarea{
@@ -161,6 +175,7 @@
   cursor: pointer; 
   align-self: center;
   transition: color 0.5s ease, transform 0.5s ease; 
+  margin-bottom: 2rem; /* Lägger till lite utrymme under knappen */
 }
 
 .contactButton:hover {

@@ -59,7 +59,6 @@ return (
       
    
        <div className={styles.contactHeader}><h1>CONTACT ME!</h1>
-      <img src="/Illustration.png" alt="planet" />
         </div>
           <div className={styles.flexContainer}> 
          
@@ -98,8 +97,8 @@ return (
                            </>
                          )}
                   </div>
-           </div>  
-        
+          
+        </div>
        {formVisible && (
         <motion.div
           className={styles.contactFormContainer}
@@ -123,9 +122,9 @@ return (
           </div>
         </motion.div>
        )}  
-       
      </motion.div>  
   </div> 
+  
  
   );
 };
