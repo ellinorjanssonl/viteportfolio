@@ -209,6 +209,8 @@
   }
   .contactMe {
     margin-top: 0; /* Tar bort utrymme ovanför `contactMe` */
+    background-image: none; /* Tar bort bakgrundsbilden */
+    background-color: rgba(93, 163, 224, 0.1) /* Ändrar bakgrundsfärgen på containeren */
   }
   .socialMediaLinks {
     margin-top: 1.5rem; /* Lägger till lite utrymme ovanför länkarna */

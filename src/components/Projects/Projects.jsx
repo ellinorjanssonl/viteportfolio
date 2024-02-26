@@ -115,6 +115,9 @@ export const Projects = () => {
                             </div>
                         </motion.div>
                     ))}
+                     <div className={styles.imageBackground}>
+         <img src="/Background.png" alt="bakgrund" />
+         </div>
                 </div>
             </motion.div>
         </div>

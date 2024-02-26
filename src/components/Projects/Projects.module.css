@@ -15,6 +15,7 @@
 }
 
 .projects {
+  z-index: 10;
   position: relative; /* Sätter .projects till en relativ position */
   display: flex;
   overflow-x: visible;
@@ -24,12 +25,14 @@
 }
 
 .projectContainer {
+  z-index: 10;
   display: flex; /* Placerar alla projekt bredvid varandra */
   gap: 5%; /* Skapar utrymme mellan projekten */
   padding: 0 10px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */ 
 }
 
 .projectContainer h3, p {
+  z-index: 10;
   margin-top: 10%;
   text-align: center; /* Centrerar rubriken */
   align-items: center;
@@ -37,11 +40,13 @@
 }
 
 .projectContainer img {
+  z-index: 10;
   position:relative;
   max-width: 100%; /* Gör bilden fullbredd */
 }
 
 .projectLinks {
+  z-index: 10;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -64,6 +69,7 @@
 }
 
 .project {
+  z-index: 10;
   height: auto;
   flex: 0 0 30%; /* Ger varje projekt en basbredd och förhindrar att de växer eller krymper */
   box-shadow: 0 4px 6px rgba(108, 198, 254, 0.7); /* Lägger till en lätt skugga för djup */
@@ -85,6 +91,14 @@
   z-index: 1; /* Ser till att det förstorade projektet ligger ovanpå de andra */
 }
 
+.imageBackground {
+  position: absolute;
+  z-index: 0; /* Ser till att bakgrunden ligger bakom projektet */
+  top: 0;
+  left: 0;
+  border-radius: 15px; /* Rundar hörnen på projektet */
+  filter: blur(100px); /* Lägger till en lätt oskärpa för djup */
+}
 
 @media screen and (max-width: 768px) {
   .h1 {
@@ -104,7 +118,10 @@
     margin-bottom: 20px;
     position: relative;
   }
-
+ 
+  .imageBackground {
+    display: none; /* Gömmer bakgrunden på mindre skärmar */
+  }
 
   .projectContainer {
     display: flex;
