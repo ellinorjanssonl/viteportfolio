@@ -28,6 +28,7 @@
     gap: 4rem;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 .menuItems a {
@@ -40,7 +41,6 @@
 
 @media screen and (max-width: 768px) {
     .footerStyle {
-        flex-direction: column;
         height: 5rem;
     }
     .menuItems {
