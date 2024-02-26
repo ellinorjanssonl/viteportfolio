@@ -131,7 +131,7 @@
     padding: 0;
     margin: 0;
     border: 1px solid #82b3f7;
-    background-color: rgba(128, 42, 121, 0.4); /* Semi-transparent background */
+    background-color: rgba(128, 42, 121, 0.1); /* Semi-transparent background */
     border-radius: 15px; /* Rounds the corners of the menu */
     box-shadow: -4px 1px 5px rgba(92, 192, 255, 0.3); /* Adds shadow for depth */
     backdrop-filter: blur(10px); /* Blurs the background behind the menu items */
