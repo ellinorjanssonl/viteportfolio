@@ -63,8 +63,9 @@ return (
           <div className={styles.flexContainer}> 
          
           <motion.div
-           initial={{ scale: 0.3, opacity: 0 }} // Startar från en mindre skala och osynlig
-            animate={{ scale: 1, opacity: 1 }} // Animerar till full skala och full synlighet
+          ref={ref}
+           initial={{ scale: 1, opacity: 0 }} // Startar från en mindre skala och osynlig
+           animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}// Animerar till full skala och full synlighet
              transition={{ duration: 1, delay: 0 }} // Definiera duration och delay för animationen
               className={styles.imagepic}
           >

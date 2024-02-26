@@ -1,10 +1,23 @@
 @import "../../vars.css";
 
+
+ .h1 {
+  font-weight: 900;
+  color: var(--color-text);
+  text-align: center; /* Centrerar rubriken */
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.h1 h1 {
+  font-size: 1.5rem; /* Storleken på rubriken */
+}
+
 .projects {
   position: relative; /* Sätter .projects till en relativ position */
   display: flex;
   overflow-x: visible;
-  margin-top: 10%;
   padding-left: 10%;
   padding-right: 10%;
   cursor: pointer;
@@ -21,7 +34,6 @@
   text-align: center; /* Centrerar rubriken */
   align-items: center;
   justify-content: center;
-
 }
 
 .projectContainer img {

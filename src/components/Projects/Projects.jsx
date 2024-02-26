@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
+import { useInView } from 'react-intersection-observer';
 
 
 function useWindowSize() {
@@ -44,8 +45,15 @@ export const Projects = () => {
             githubUrl: "https://github.com/ellinorjanssonl",
             websiteUrl: "https://ellinorsportfolio.vercel.app/"
         },
-        // Lägg till fler projekt efter behov
+     
     ];
+
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 }); 
+
+    const fadeInVariant = {
+        visible: { opacity: 1, transition: { duration: 1.2 } },
+        hidden: { opacity: 0 },
+    };
 
     const [width] = useWindowSize();
 
@@ -71,32 +79,44 @@ export const Projects = () => {
     };
 
     return (
-        <motion.div
-            id="projects"
-            className={styles.projects}
-            initial="initial"
-            animate="animate"
-            transition={{ staggerChildren: 0.9, delayChildren: 0.5 }}
-        >
-            <div className={styles.projectContainer}>
-                {projects.map((project) => (
-                    <motion.div
-                        key={project.id}
-                        custom={project.id}
-                        variants={projectVariants}
-                        whileHover="whileHover"
-                        className={styles.project}
-                    >
-                        <img src={project.imageUrl} alt={project.title} />
-                        <h3>{project.title}</h3>
-                        <p>{project.description}</p>
-                        <div className={styles.projectLinks}>
-                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">Website</a>
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-        </motion.div>
+        <div>
+        <div className={styles.h1}>
+            <motion.h1
+                ref={ref}
+                variants={fadeInVariant}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+            >
+                MY PROJECTS
+            </motion.h1> 
+        </div>
+            <motion.div
+                id="projects"
+                className={styles.projects}
+                initial="initial"
+                animate="animate"
+                transition={{ staggerChildren: 0.9, delayChildren: 0.5 }}
+            > 
+                <div className={styles.projectContainer}>
+                    {projects.map((project) => (
+                        <motion.div
+                            key={project.id}
+                            custom={project.id}
+                            variants={projectVariants}
+                            whileHover="whileHover"
+                            className={styles.project}
+                        >
+                            <img src={project.imageUrl} alt={project.title} />
+                            <h3>{project.title}</h3>
+                            <p>{project.description}</p>
+                            <div className={styles.projectLinks}>
+                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">Website</a>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
+        </div>
     );
 }

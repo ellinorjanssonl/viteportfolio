@@ -1,34 +1,69 @@
-import React from "react";
-import styles from "./Skills.module.css";
+import React from 'react';
+import styles from './Skills.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faGit, faNodeJs, faHtml5, faCss3Alt, faJs, faReact, faBootstrap} from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faCodeBranch, faImage} from "@fortawesome/free-solid-svg-icons";
-import { motion, useInView } from 'framer-motion'; 
+import {
+  faGithub,
+  faGit,
+  faNodeJs,
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+  faBootstrap,
+} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faCodeBranch, faImage } from '@fortawesome/free-solid-svg-icons';
+import { motion, useInView } from 'framer-motion';
 
 export const Skills = () => {
-    const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: true });
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-    const diamondVariants = {
-        visible: { opacity: 1, scale: 1, rotate: 360, transition: { duration: 1.5 } },
-        hidden: { opacity: 0, scale: 0 }
-    };
+  const diamondVariants = {
+    visible: { opacity: 1, scale: 1, rotate: 360, transition: { duration: 1.5 } },
+    hidden: { opacity: 0, scale: 0 }
+};
 
-    return (
-        <div id="skills" className={styles.skills}>
-            <div className={styles.flexContainer}>
-                <div className={styles.pContainer}>
-                    <p className={styles.p}>The list shows my different experiences in frontend, backend, and other things I consider important for a good understanding of web-application designs.</p>
-                </div>
-                <motion.div
+  const containerVariants = {
+
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.9,
+        when: 'beforeChildren',
+        staggerChildren: 0.1,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      scale: 0.45,
+    },
+  };
+
+ 
+  return (
+    <motion.div
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      className={styles.skills}
+    >
+      <div className={styles.flexContainer}>
+        <div className={styles.pContainer}>
+          <p className={styles.p}>
+            The list shows my different experiences in frontend, backend, and other things I consider important for a good understanding of web-application designs.
+          </p>
+        </div>
+        <motion.div
                     ref={ref}
                     variants={diamondVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     className={styles.diamond}
                 >
-                    <img src="/Illustration (1).png" alt="diamond" />
-                </motion.div>
+          <img src="/Illustration (1).png" alt="diamond" />
+        </motion.div>
                
                 <div className={styles.skillsContainer}>
                     <h1 className={styles.h1}>MY CODING SKILLS</h1>
@@ -50,7 +85,7 @@ export const Skills = () => {
                     </div>     
                 </div>    
             </div>
-        </div>
+         </motion.div>
     );
     };
 
