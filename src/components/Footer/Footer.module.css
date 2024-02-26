@@ -3,16 +3,15 @@
     margin-top: 3rem;
     background-color: var(--color-bg);
     border-top: 1px solid #80e1ff;
-    height: 4rem;
+    height: 6rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .footerStyle a {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-top: 2rem;
     color: #ffffff;
     font-weight: 900;
     align-items: center;
@@ -39,9 +38,20 @@
     color: #78c2ff;
 }
 
+.footertext p {
+    font-size: 0.8rem;
+    color: #ffffff;
+   
+}
+
+.footertext {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 768px) {
     .footerStyle {
-        height: 5rem;
+        height: 6rem;
     }
     .menuItems {
         gap: 2.5rem;

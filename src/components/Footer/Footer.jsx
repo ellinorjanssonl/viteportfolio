@@ -23,6 +23,9 @@ const Footer = () => {
                         <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}>ABOUT</a></li>
                     </ul>
       </nav>
+      <div className={styles.footertext}>  
+      <p>This portfolio is created by Ellinor Jansson Lande. © 2024 </p>
+      </div>
     </footer>
   )
 }
