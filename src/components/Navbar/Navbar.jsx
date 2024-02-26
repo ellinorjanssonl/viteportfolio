@@ -26,8 +26,8 @@ export const Navbar = () => {
             x: 0,
             transition: {
                 type: 'spring',
-                stiffness: 30,
-                damping: 5
+                stiffness: 900,
+                damping: 100
             }
         },
 
@@ -36,8 +36,8 @@ export const Navbar = () => {
             x: "100%",
             transition: {
                 type: 'spring',
-                stiffness: 30,
-                damping: 5
+                stiffness: 900,
+                damping: 100
             }
         }
     };
