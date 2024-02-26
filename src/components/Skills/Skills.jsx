@@ -43,6 +43,7 @@ export const Skills = () => {
  
   return (
     <motion.div
+    id='skills'
       ref={ref}
       variants={containerVariants}
       initial="hidden"
