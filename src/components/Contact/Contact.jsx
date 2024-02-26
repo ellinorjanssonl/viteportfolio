@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer"; // Importera useInView
 import styles from "./Contact.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faLocation, faLocationPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export const Contact = () => {
   const [comment, setComment] = useState("");
@@ -73,9 +74,10 @@ return (
            </motion.div>
 
                 <div className={styles.contactInfo}>
-                  <p><strong>E-mail:</strong> Ellinor_jansson@hotmail.com</p>
-                    <p><strong>Phone number:</strong> +46 707836682</p>
-                      <p><strong>Location:</strong> Stockholm, Sweden</p>
+                
+                  <p><strong><FontAwesomeIcon icon={faEnvelope} size="lg" />  E-mail:</strong> Ellinor_jansson@hotmail.com</p>
+                    <p><strong><FontAwesomeIcon icon={faPhone} size="lg" />  Phone number:</strong> +46 707836682</p>
+                      <p><strong><FontAwesomeIcon icon={faLocationPin} size="lg" />  Location:</strong> Stockholm, Sweden</p>
         
   
                     <div className={styles.socialMediaLinks}>

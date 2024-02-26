@@ -195,7 +195,8 @@
     margin-top: 0; /* Tar bort utrymme ovanför `contactMe` */
   }
   .socialMediaLinks {
-    gap: 1rem; /* Lägger till lite utrymme mellan länkarna */
+    margin-top: 1.5rem; /* Lägger till lite utrymme ovanför länkarna */
+    gap: 2rem; /* Lägger till lite utrymme mellan länkarna */
     font-size: 2rem; /* Storleken på ikonerna */
   }
   .contactInfo p {
@@ -225,12 +226,14 @@
   .contactForm input, .contactForm textarea {
     width: 80%; /* Gör att inputfälten tar upp hela bredden */
   }
- 
+  .contactForm {
+    width: 100%; /* Gör att formuläret tar upp hela bredden */
+  }
   .contactHeader h1 {
     font-size: 2rem; /* Storleken på rubriken */
   }
   .socialMediaLinks {
-    gap: 1rem; /* Lägger till lite utrymme mellan länkarna */
+    gap: 2rem; /* Lägger till lite utrymme mellan länkarna */
     font-size: 2rem; /* Storleken på ikonerna */
   }
   .contactInfo p {

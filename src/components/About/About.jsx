@@ -30,7 +30,7 @@ export const About = () => {
                   key={index}
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.25 }}
+                  transition={{ duration: 0.5, delay: index * 0.15 }}
                 >
                   {letter}
                 </motion.span>
