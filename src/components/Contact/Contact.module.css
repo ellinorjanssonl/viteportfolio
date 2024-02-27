@@ -1,7 +1,7 @@
 @import "../../vars.css";
 
 .contactMe {
-  background-image: url("/public/Mountains.png"); /* Lägger till en bakgrundsbild */
+  background-image: url("/Mountains.png"); /* Lägger till en bakgrundsbild */
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #181136; /* Lägger till en ram runt containeren */
