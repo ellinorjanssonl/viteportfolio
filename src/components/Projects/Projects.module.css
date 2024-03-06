@@ -42,7 +42,11 @@
 .projectContainer img {
   z-index: 10;
   position:relative;
-  max-width: 100%; /* Gör bilden fullbredd */
+  padding: 10px; /* Lägger till lite utrymme runt bilden */
+  height: auto;
+  width: 100%; /* Gör bilden fullbredd */
+  border-radius: 15px; /* Rundar hörnen på projektet */
+
 }
 
 .projectLinks {
@@ -119,10 +123,6 @@
     position: relative;
   }
  
-  .imageBackground {
-    display: none; /* Gömmer bakgrunden på mindre skärmar */
-  }
-
   .projectContainer {
     display: flex;
     flex-direction: column;

@@ -1,20 +1,17 @@
 @import "../../vars.css";
 
 .contactMe {
-  border: 1px solid #181136; /* Lägger till en ram runt containeren */
-  box-shadow: 1px 2px 3px 2px rgba(108, 222, 254, 0.7); /* Lägger till en lätt skugga för djup */
   border-radius: 30px; /* Rundar hörnen på containeren */
   z-index: 100; 
   justify-content: center;
   display: flex; /* Aktiverar Flexbox */
   flex-direction: column; /* Staplar barnen vertikalt */
+  padding-bottom: 3%;
   margin: 0 10%; /* Lägger till lite utrymme runt containeren */
 }
 .contactContainer { 
   background-image: url(/svg.png);
   background-size: cover;
-  padding-bottom: 3%;
-  z-index: 100; 
   display: flex; /* Aktiverar Flexbox */
   flex: 1; /* Låter containeren ta upp allt tillgängligt utrymme */
   flex-direction: column; /* Staplar barnen vertikalt */
@@ -102,7 +99,7 @@
   margin-right: 10%; 
   width: 100%; /* Gör bilden responsiv */
   border:none;
-  background-color: rgba(255, 101, 209, 0.1);
+  background-color:rgba(255, 98, 234, 0.5);
   border-radius: 100%; /* Rundar hörnen på bilden */
 }
 

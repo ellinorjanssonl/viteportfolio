@@ -26,8 +26,8 @@ export const Projects = () => {
             title: "Art Gallery Shop",
             description: "En webbshop med mina egna målningar och min konst i en fungerande webbshop. Här kan man se mina målningar och lägga till dem i en varukorg.",
             imageUrl: "arpage.png",
-            githubUrl: "https://github.com/ellinorjanssonl",
-            websiteUrl: "https://ellinorsportfolio.vercel.app/"
+            githubUrl: "https://github.com/ellinorjanssonl/myArtPage",
+            websiteUrl: "https://ellinorsart.vercel.app/"
         },
         {
             id: 2,
