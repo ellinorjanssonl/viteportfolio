@@ -47,8 +47,6 @@ export const Contact = () => {
 
 return (
   <div id="contact" className={styles.contactContainer}>
-   
-      
       <motion.div
         ref={ref}
         initial={{ y: 200, opacity: 0 }} // Börjar positionen lite nedåt och opaciteten som 0
@@ -69,7 +67,7 @@ return (
              transition={{ duration: 1, delay: 0 }} // Definiera duration och delay för animationen
               className={styles.imagepic}
           >
-               <img src="/linkedin.jpg" alt="contactmepic" />
+               <img src="/linkedin.png" alt="contactmepic" />
            </motion.div>
 
                 <div className={styles.contactInfo}>
@@ -93,11 +91,10 @@ return (
                        {!formVisible && (
                          <>
                            <p className={styles.buttomP}>Want to leave a comment?</p>
-                             <button onClick={toggleFormVisibility} className={styles.contactButton}>Click me!</button>
+                             <button onClick={toggleFormVisibility} className={styles.contactButton}>Click me!</button>  
                            </>
                          )}
-                  </div>
-          
+                  </div> 
         </div>
        {formVisible && (
         <motion.div
@@ -121,10 +118,11 @@ return (
           </form>
           </div>
         </motion.div>
+        
+        
        )}  
-     </motion.div>  
+     </motion.div> 
   </div> 
   
- 
   );
 };

@@ -1,9 +1,6 @@
 @import "../../vars.css";
 
 .contactMe {
-  background-image: url("/Mountains.png"); /* Lägger till en bakgrundsbild */
-  background-repeat: no-repeat;
-  background-size: cover;
   border: 1px solid #181136; /* Lägger till en ram runt containeren */
   box-shadow: 1px 2px 3px 2px rgba(108, 222, 254, 0.7); /* Lägger till en lätt skugga för djup */
   border-radius: 30px; /* Rundar hörnen på containeren */
@@ -11,16 +8,16 @@
   justify-content: center;
   display: flex; /* Aktiverar Flexbox */
   flex-direction: column; /* Staplar barnen vertikalt */
-  margin-bottom: 5%; /* Lägger till lite utrymme under `contactMe` */
   margin: 0 10%; /* Lägger till lite utrymme runt containeren */
 }
 .contactContainer { 
-  
+  background-image: url(/svg.png);
+  background-size: cover;
+  padding-bottom: 3%;
   z-index: 100; 
   display: flex; /* Aktiverar Flexbox */
   flex: 1; /* Låter containeren ta upp allt tillgängligt utrymme */
   flex-direction: column; /* Staplar barnen vertikalt */
-  margin-bottom: 1rem; /* Lägger till lite utrymme nedtill */
 }
 
 .contactInfo img {
@@ -104,8 +101,8 @@
 .imagepic img {
   margin-right: 10%; 
   width: 100%; /* Gör bilden responsiv */
-  border: 1px solid #1b113a; /* Lägger till en ram runt bilden */
-  box-shadow: 1px 2px 10px 2px rgba(108, 222, 254, 0.7); /* Lägger till en lätt skugga för djup */
+  border:none;
+  background-color: rgba(255, 101, 209, 0.1);
   border-radius: 100%; /* Rundar hörnen på bilden */
 }
 
@@ -203,14 +200,14 @@
   }
   .contactContainer {
     margin: 0; /* Tar bort utrymme runt containeren */
+    background-size: cover;
+    padding: 0;
   }
   .contactHeader h1 {
     font-size: 3rem; /* Storleken på rubriken */
   }
   .contactMe {
     margin-top: 0; /* Tar bort utrymme ovanför `contactMe` */
-    background-image: none; /* Tar bort bakgrundsbilden */
-    background-color: rgba(93, 163, 224, 0.1) /* Ändrar bakgrundsfärgen på containeren */
   }
   .socialMediaLinks {
     margin-top: 1.5rem; /* Lägger till lite utrymme ovanför länkarna */
@@ -236,6 +233,7 @@
   .contactForm button {
     align-self: center; /* Centrerar knappen */
     width: 20%; /* Gör att knappen tar upp hela bredden */
+    margin-bottom: 5%;
   }
 }
 

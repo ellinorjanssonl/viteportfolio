@@ -23,9 +23,9 @@ export const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "Project 1",
-            description: "This is a project where you can see the latest movies. I used React, Node.js, Express, html and css. I also made a page where you can see the movies you have saved and download it in case there is no wifi.",
-            imageUrl: "Illustration.png",
+            title: "Art Gallery Shop",
+            description: "En webbshop med mina egna målningar och min konst i en fungerande webbshop. Här kan man se mina målningar och lägga till dem i en varukorg.",
+            imageUrl: "arpage.png",
             githubUrl: "https://github.com/ellinorjanssonl",
             websiteUrl: "https://ellinorsportfolio.vercel.app/"
         },
