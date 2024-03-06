@@ -86,6 +86,7 @@ export const Projects = () => {
                 variants={fadeInVariant}
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
+                className={styles.h1}
             >
                 MY PROJECTS
             </motion.h1> 
@@ -115,9 +116,7 @@ export const Projects = () => {
                             </div>
                         </motion.div>
                     ))}
-                     <div className={styles.imageBackground}>
-         <img src="/Background.png" alt="bakgrund" />
-         </div>
+    
                 </div>
             </motion.div>
         </div>

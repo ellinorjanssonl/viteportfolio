@@ -1,6 +1,5 @@
 @import "../../vars.css";
 
-
  .h1 {
   font-weight: 900;
   color: var(--color-text);
@@ -28,12 +27,12 @@
   z-index: 10;
   display: flex; /* Placerar alla projekt bredvid varandra */
   gap: 5%; /* Skapar utrymme mellan projekten */
-  padding: 0 10px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */ 
+  padding: 0 5px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */ 
 }
 
 .projectContainer h3, p {
   z-index: 10;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center; /* Centrerar rubriken */
   align-items: center;
   justify-content: center;
@@ -46,7 +45,7 @@
   height: auto;
   width: 100%; /* Gör bilden fullbredd */
   border-radius: 15px; /* Rundar hörnen på projektet */
-
+  filter: drop-shadow(0 2px 4px rgba(108, 198, 254, 0.7)); /* Lägger till en lätt skugga för djup */
 }
 
 .projectLinks {
@@ -95,14 +94,6 @@
   z-index: 1; /* Ser till att det förstorade projektet ligger ovanpå de andra */
 }
 
-.imageBackground {
-  position: absolute;
-  z-index: 0; /* Ser till att bakgrunden ligger bakom projektet */
-  top: 0;
-  left: 0;
-  border-radius: 15px; /* Rundar hörnen på projektet */
-  filter: blur(100px); /* Lägger till en lätt oskärpa för djup */
-}
 
 @media screen and (max-width: 768px) {
   .h1 {
