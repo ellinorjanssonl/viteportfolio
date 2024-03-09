@@ -47,7 +47,7 @@ export const About = () => {
          Jag är en frontend-webbutvecklare med passion för att skapa stilrena, användarvänliga och funktionella webbapplikationer. 
          Jag har en stark förståelse för frontend-utveckling men har också gjort endel backend-applikationer. 
          Jag lär mig snabbt och är alltid ivrig att utöka mina kunskaper och färdigheter. 
-         Jag ser fram emot att bidra med min kreativitet och den tekniska kompetens jag har ett team och hjälpa till att skapa kreativa och välgjorda webbapplikationer.
+         Jag ser fram emot att bidra med min kreativitet och den tekniska kompetens jag har till ett team och hjälpa till att skapa kreativa och välgjorda webbapplikationer.
           </motion.p>
           </div>
       </div>
