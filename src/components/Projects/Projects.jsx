@@ -24,10 +24,10 @@ export const Projects = () => {
         },
         {
             id: 3,
-            title: "Project 3",
-            description: "This is a project is a webshop for a company that sells clothes. I used React, Node.js, Express, html and css.  I also made a page where you can see your orders and a page where you can see the products you have in your cart",
-            imageUrl: "Illustrationtop.png",
-            githubUrl: "https://github.com/ellinorjanssonl",
+            title: "Min Portfolio",
+            description: "Min personliga portfolio där jag visar mina projekt och mina kunskaper inom webbutveckling. Koden för denna sida kan hittas i länken till GitHub.",
+            imageUrl: "PORTFOLIO.png",
+            githubUrl: "https://github.com/ellinorjanssonl/viteportfolio",
             websiteUrl: "https://ellinorsportfolio.vercel.app/"
         },
      
