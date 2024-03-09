@@ -18,7 +18,14 @@
   height: 15rem; /* Behåller bildens proportioner */
   object-fit: cover; /* Säkerställer att bilden täcker området utan att förlora proportionerna */
   border-radius: 15px; /* Rundar hörnen på bilden */
-  margin-bottom: 5%; /* Lägger till lite utrymme under bilden */
+  margin-bottom: 2rem; /* Lägger till lite utrymme under bilden */
+  box-shadow: 0 2px 4px rgba(108, 198, 254, 0.7); /* Lägger till en lätt skugga för djup */
+  border: 1px solid rgba(108, 198, 254, 0.7); /* Lägger till en vit ram runt bilden */
+  filter: grayscale(50%); /* Gör bilden svartvit */
+}
+
+.projects img:hover {
+  filter: grayscale(0%); /* Gör bilden färgglad vid hovring */
 }
 
 .projects {
