@@ -53,7 +53,7 @@ export const Skills = () => {
       <div className={styles.flexContainer}>
         <div className={styles.pContainer}>
           <p className={styles.p}>
-            The list shows my different experiences in frontend, backend, and other things I consider important for a good understanding of web-application designs.
+            Listan visar mina erfarenheter och kunskaper inom front-end och backend samt det jag kan tycka är viktigt utöver inom visuell design.
           </p>
         </div>
         <motion.div
@@ -67,7 +67,7 @@ export const Skills = () => {
         </motion.div>
                
                 <div className={styles.skillsContainer}>
-                    <h1 className={styles.h1}>MY CODING SKILLS</h1>
+                    <h1 className={styles.h1}>MINA ERFARENHETER</h1>
                     <div className={styles.skill}>
                         <ul className={styles.list}>
                             <li><FontAwesomeIcon icon={faHtml5} size="lg" color="red" /> Html</li>

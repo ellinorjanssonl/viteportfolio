@@ -45,7 +45,7 @@ export const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.leftContainer}>
-                <a className={styles.title} href="/CV2024.pdf" download="CV_Ellinor_Jansson_Lande.pdf">Download CV</a>
+                <a className={styles.title} href="/CV2024.pdf" download="CV_Ellinor_Jansson_Lande.pdf">Ladda ner CV</a>
                   </div>
            
             <div className={styles.rightContainer}>
@@ -66,10 +66,10 @@ export const Navbar = () => {
                     animate={isMenuOpen ? "open" : "closed"}
                 >
                     <ul className={styles.menuItems}>
-                        <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}><FontAwesomeIcon icon={faCode} /><br />SKILLS</a></li>
-                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}><FontAwesomeIcon icon={faBriefcase} /><br />PROJECTS</a></li>
-                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}><FontAwesomeIcon icon={faEnvelope} /><br />CONTACT</a></li>
-                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}><FontAwesomeIcon icon={faHouse}/><br />ABOUT</a></li>
+                        <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}><FontAwesomeIcon icon={faCode} /><br />ERFARENHETER</a></li>
+                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}><FontAwesomeIcon icon={faBriefcase} /><br />PROJEKT</a></li>
+                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}><FontAwesomeIcon icon={faEnvelope} /><br />KONTAKT</a></li>
+                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}><FontAwesomeIcon icon={faHouse}/><br />OM MIG</a></li>
                     </ul>
                 </motion.div>
             </div>

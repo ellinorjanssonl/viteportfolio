@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export const About = () => {
   const [animate, setAnimate] = useState(false);
-  const text = "Frontend Developer."; // Texten som ska animeras
+  const text = "Front-end utvecklare."; // Texten som ska animeras
   const letters = Array.from(text); 
 
 
@@ -44,10 +44,10 @@ export const About = () => {
             transition={{ duration: 1, delay: 1.3 }} // Lägg till delay för att synka med andra animationer om så önskas
             className={styles.p}
           >
-          I am a Frontend web developer with a passion for creating beautiful, user-friendly, and functional web applications. 
-          I have a strong understanding of front-end development but has also done a lot of backend applications. 
-          I am a quick learner and Im always looking to expand my knowledge and skills. 
-          I am excited to bring my creativity and technical skills to a team and help create amazing web applications.
+         Jag är en frontend-webbutvecklare med passion för att skapa stilrena, användarvänliga och funktionella webbapplikationer. 
+         Jag har en stark förståelse för frontend-utveckling men har också gjort endel backend-applikationer. 
+         Jag lär mig snabbt och är alltid ivrig att utöka mina kunskaper och färdigheter. 
+         Jag ser fram emot att bidra med min kreativitet och den tekniska kompetens jag har ett team och hjälpa till att skapa kreativa och välgjorda webbapplikationer.
           </motion.p>
           </div>
       </div>

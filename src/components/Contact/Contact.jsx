@@ -56,7 +56,7 @@ return (
        >
       
    
-       <div className={styles.contactHeader}><h1>CONTACT ME!</h1>
+       <div className={styles.contactHeader}><h1>KONTAKTA MIG!</h1>
         </div>
           <div className={styles.flexContainer}> 
          
@@ -72,9 +72,9 @@ return (
 
                 <div className={styles.contactInfo}>
                 
-                  <p><strong><FontAwesomeIcon icon={faEnvelope} size="lg" />  E-mail:</strong> Ellinor_jansson@hotmail.com</p>
-                    <p><strong><FontAwesomeIcon icon={faPhone} size="lg" />  Phone number:</strong> +46 707836682</p>
-                      <p><strong><FontAwesomeIcon icon={faLocationPin} size="lg" />  Location:</strong> Stockholm, Sweden</p>
+                  <p><strong><FontAwesomeIcon icon={faEnvelope} size="lg" />  E-post:</strong> Ellinor_jansson@hotmail.com</p>
+                    <p><strong><FontAwesomeIcon icon={faPhone} size="lg" />  Telfefon:</strong> +46 707836682</p>
+                      <p><strong><FontAwesomeIcon icon={faLocationPin} size="lg" />  Plats:</strong> Stockholm, Sweden</p>
         
   
                     <div className={styles.socialMediaLinks}>
@@ -90,8 +90,8 @@ return (
                         </div>
                        {!formVisible && (
                          <>
-                           <p className={styles.buttomP}>Want to leave a comment?</p>
-                             <button onClick={toggleFormVisibility} className={styles.contactButton}>Click me!</button>  
+                           <p className={styles.buttomP}>Vill du lämna en kommentar?</p>
+                             <button onClick={toggleFormVisibility} className={styles.contactButton}>Klicka här!</button>  
                            </>
                          )}
                   </div> 

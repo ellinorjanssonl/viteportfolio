@@ -31,8 +31,10 @@
 }
 
 .menuItems a {
+    font-size: 1rem;
     transition: color 0.3s;
 }
+
 
 .menuItems a:hover {
     color: #78c2ff;

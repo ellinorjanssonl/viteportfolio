@@ -17,14 +17,14 @@ const Footer = () => {
     <footer className={styles.footerStyle}>
       <nav>
       <ul className={styles.menuItems}>
-                        <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}>SKILLS</a></li>
-                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}>PROJECTS</a></li>
-                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}>CONTACT</a></li>
-                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}>ABOUT</a></li>
+      <li><a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#skills'); }}><FontAwesomeIcon icon={faCode} /><br /></a></li>
+                        <li><a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#projects'); }}><FontAwesomeIcon icon={faBriefcase} /><br /></a></li>
+                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}><FontAwesomeIcon icon={faEnvelope} /><br /></a></li>
+                        <li><a href="#about" onClick={(e) => { e.preventDefault(); handleScroll('#about'); }}><FontAwesomeIcon icon={faHouse}/><br /></a></li>
                     </ul>
       </nav>
       <div className={styles.footertext}>  
-      <p>This portfolio is created by Ellinor Jansson Lande. © 2024 </p>
+      <p>Denna portfolio är skapad av Ellinor Jansson Lande. © 2024 </p>
       </div>
     </footer>
   )

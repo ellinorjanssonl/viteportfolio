@@ -32,15 +32,17 @@ export const Projects = () => {
         },
      
     ];
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0 });
 
     const projectVariants = {
-        hidden: { opacity: 0, y: 150 }, // Projekt startar utanför skärmen till vänster
+        hidden: { opacity: 0, y: 300 },
         visible: (i) => ({
             opacity: 1,
             y: 0,
             transition: {
-                delay: i * 0.9, // Varje projekt fördröjs lite mer än det föregående
+                delay: i * 0.6,
+                animation: { duration: 0.5, type: "spring"}
+
             },
         }),
     };
@@ -48,7 +50,7 @@ export const Projects = () => {
 
     return (
         <div ref={ref}>
-            <h1 className={styles.h1}>MY PROJECTS</h1>
+            <h1 className={styles.h1}>MINA PROJEKT</h1>
             <div className={styles.projects}>
                 {projects.map((project, index) => (
                     <motion.div
@@ -64,8 +66,9 @@ export const Projects = () => {
                         <p>{project.description}</p>
                         <div className={styles.projectLinks}>
                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">Website</a>
+                            <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">Hemsida</a>
                         </div>
+            
                     </motion.div>
                 ))}
             </div>
