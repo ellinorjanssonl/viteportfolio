@@ -73,7 +73,7 @@ return (
                 <div className={styles.contactInfo}>
                 
                   <p><strong><FontAwesomeIcon icon={faEnvelope} size="lg" />  E-post:</strong> Ellinor_jansson@hotmail.com</p>
-                    <p><strong><FontAwesomeIcon icon={faPhone} size="lg" />  Telfefon:</strong> +46 707836682</p>
+                    <p><strong><FontAwesomeIcon icon={faPhone} size="lg" />  Telefon:</strong> +46 707836682</p>
                       <p><strong><FontAwesomeIcon icon={faLocationPin} size="lg" />  Plats:</strong> Stockholm, Sweden</p>
         
   
