@@ -15,9 +15,9 @@
 
 .projects {
   z-index: 10;
-  position: relative; /* Sätter .projects till en relativ position */
-  display: flex;
-  overflow-x: visible;
+  display: flex; /* Placerar alla projekt bredvid varandra */
+  gap: 20px; /* Lägger till lite utrymme mellan projekten */
+  align-items: center;
   padding-left: 10%;
   padding-right: 10%;
   cursor: pointer;
@@ -26,7 +26,6 @@
 .projectContainer {
   z-index: 10;
   display: flex; /* Placerar alla projekt bredvid varandra */
-  gap: 5%; /* Skapar utrymme mellan projekten */
   padding: 0 5px; /* Lägger till lite padding på sidorna för att förhindra att innehållet rör vid kanterna */ 
 }
 

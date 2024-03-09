@@ -1,22 +1,7 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
 import { useInView } from 'react-intersection-observer';
 
-
-function useWindowSize() {
-    const [size, setSize] = useState([window.innerWidth, window.innerHeight]);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setSize([window.innerWidth, window.innerHeight]);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    return size;
-}
 
 export const Projects = () => {
 
@@ -31,11 +16,11 @@ export const Projects = () => {
         },
         {
             id: 2,
-            title: "Project 2",
-            description: "This is a news site where you can read the latest news. I used React, Node.js, Express, html and css. I also made a page where you can see the news you have saved.",
-            imageUrl: "Ilustrationbottom.png",
-            githubUrl: "https://github.com/ellinorjanssonl",
-            websiteUrl: "https://ellinorsportfolio.vercel.app/"
+            title: "Food API App",
+            description: "En applikation från ett API där man kan söka efter maträtter för att sedan få information om ingidienser, instruktioner och mått.",
+            imageUrl: "FOODAPI.png",
+            githubUrl: "https://github.com/ellinorjanssonl/FOODAPI",
+            websiteUrl: "https://foodapi-ten.vercel.app/"
         },
         {
             id: 3,
@@ -47,78 +32,43 @@ export const Projects = () => {
         },
      
     ];
-
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 }); 
-
-    const fadeInVariant = {
-        visible: { opacity: 1, transition: { duration: 1.2 } },
-        hidden: { opacity: 0 },
-    };
-
-    const [width] = useWindowSize();
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     const projectVariants = {
-        initial: (custom) => ({
-            opacity: 0,
-            x: custom * 50
-        }),
-        animate: {
-            opacity: 1.5,
-            x: 0,
-            transition: { type: "spring", stiffness: 100 }
-        },
-        whileHover: {
-            scale: width > 300 ? 1.1 : 1.05, // Mindre skalning på små skärmar
+        hidden: { opacity: 0, y: 150 }, // Projekt startar utanför skärmen till vänster
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
             transition: {
-                duration: 0.2,
-                ease: "easeInOut"
+                delay: i * 0.9, // Varje projekt fördröjs lite mer än det föregående
             },
-            originX: 0.5,
-            originY: 0.5,
-        }
+        }),
     };
 
+
     return (
-        <div>
-        <div className={styles.h1}>
-            <motion.h1
-                ref={ref}
-                variants={fadeInVariant}
-                initial="hidden"
-                animate={inView ? 'visible' : 'hidden'}
-                className={styles.h1}
-            >
-                MY PROJECTS
-            </motion.h1> 
-        </div>
-            <motion.div
-                id="projects"
-                className={styles.projects}
-                initial="initial"
-                animate="animate"
-                transition={{ staggerChildren: 0.9, delayChildren: 0.5 }}
-            > 
-                <div className={styles.projectContainer}>
-                    {projects.map((project) => (
-                        <motion.div
-                            key={project.id}
-                            custom={project.id}
-                            variants={projectVariants}
-                            whileHover="whileHover"
-                            className={styles.project}
-                        >
-                            <img src={project.imageUrl} alt={project.title} />
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
-                            <div className={styles.projectLinks}>
-                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-                                <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">Website</a>
-                            </div>
-                        </motion.div>
-                    ))}
-    
-                </div>
-            </motion.div>
+        <div ref={ref}>
+            <h1 className={styles.h1}>MY PROJECTS</h1>
+            <div className={styles.projects}>
+                {projects.map((project, index) => (
+                    <motion.div
+                        key={project.id}
+                        custom={index} // Använder index som anpassat värde för att skapa en fördröjningseffekt
+                        variants={projectVariants}
+                        initial="hidden"
+                        animate={inView ? 'visible' : 'hidden'} // Animerar till 'visible' endast om inView är true
+                        className={styles.project}
+                    >
+                        <img src={project.imageUrl} alt={project.title} />
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <div className={styles.projectLinks}>
+                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">Website</a>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
         </div>
     );
 }
