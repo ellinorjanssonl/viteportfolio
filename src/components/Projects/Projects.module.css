@@ -19,21 +19,21 @@
   object-fit: cover; /* Säkerställer att bilden täcker området utan att förlora proportionerna */
   border-radius: 15px; /* Rundar hörnen på bilden */
   margin-bottom: 2rem; /* Lägger till lite utrymme under bilden */
-  box-shadow: 0 2px 4px rgba(108, 198, 254, 0.7); /* Lägger till en lätt skugga för djup */
   border: 1px solid rgba(108, 198, 254, 0.7); /* Lägger till en vit ram runt bilden */
-  filter: grayscale(50%); /* Gör bilden svartvit */
+  filter: grayscale(40%); /* Gör bilden svartvit */
 }
 
 .projects img:hover {
   filter: grayscale(0%); /* Gör bilden färgglad vid hovring */
+ 
 }
 
 .projects {
-  height: 100%;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px; /* This will add space between the items */
+  gap: 2rem; /* This will add space between the items */
   padding: 0 10%;
 
 }
@@ -76,7 +76,7 @@
   align-items: center; /* This will center the content horizontally */
   justify-content: space-between; /* This will distribute the space inside the item */
   height: 100%;
-  padding: 2rem; /* Adds padding inside each project */
+  padding: 1rem; /* Adds padding inside each project */
   box-shadow: 0 4px 6px rgba(108, 198, 254, 0.7); /* Lägger till en lätt skugga för djup */
   border-radius: 15px; /* Rundar hörnen på projektet */
   margin-bottom: 10%; /* Lägger till lite utrymme under projekten */

@@ -40,9 +40,11 @@ export const Projects = () => {
             opacity: 1,
             y: 0,
             transition: {
-                delay: i * 0.6,
-                animation: { duration: 0.5, type: "spring"}
-
+                delay: i * 0.8,
+                // Uppdatera din transition att använda en spring-animation
+                type: "spring",
+                stiffness: 80, // Styr hur "hård" fjädern är, högre värde ger snabbare rörelse
+                damping: 8, // Styr hur snabbt rörelsen dämpas, lägre värde ger mer "studs"
             },
         }),
     };
