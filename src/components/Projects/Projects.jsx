@@ -16,11 +16,11 @@ export const Projects = () => {
         },
         {
             id: 2,
-            title: "Food API App",
-            description: "En applikation från ett API där man kan söka efter maträtter för att sedan få information om ingidienser, instruktioner och mått.",
-            imageUrl: "FOODAPI.png",
-            githubUrl: "https://github.com/ellinorjanssonl/FOODAPI",
-            websiteUrl: "https://foodapi-ten.vercel.app/"
+            title: "E-commerce FashionHub",
+            description: "En webbshop i med backend och frontend. Jag har en databas som lagrar produkter och inloggningsuppgifter samt ett api som hämtar produkterna från databasen.",
+            imageUrl: "fashionhub.png",
+            githubUrl: "https://github.com/ellinorjanssonl/E-commercive",
+            websiteUrl: "https://fashion-hub-theta.vercel.app/"
         },
         {
             id: 3,
