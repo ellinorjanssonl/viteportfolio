@@ -18,7 +18,7 @@ export const Projects = () => {
             id: 2,
             title: "FashionHub",
             description: "En webbshop i både backend och frontend. Jag har en databas som lagrar produkter och inloggningsuppgifter samt ett api som hämtar produkterna från databasen.",
-            imageUrl: "fashionhub.png",
+            imageUrl: "fashionhub2.png",
             githubUrl: "https://github.com/ellinorjanssonl/E-commercive",
             websiteUrl: "https://fashion-hub-theta.vercel.app/"
         },
