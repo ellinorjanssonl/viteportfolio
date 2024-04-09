@@ -35,8 +35,8 @@
   justify-content: center;
   gap: 2rem; /* This will add space between the items */
   padding: 0 10%;
-
 }
+
 
 .projectContainer h3, p {
   z-index: 10;
@@ -81,13 +81,14 @@
   border-radius: 15px; /* Rundar hörnen på projektet */
   margin-bottom: 10%; /* Lägger till lite utrymme under projekten */
   margin-top: 5%;
-  background-color: rgba(64, 92, 145, 0.1);
+  background-color: rgba(129, 199, 227, 0.1);
+  transition: ease-in-out 0.3s; /* Gör förstoringsanimationen mjuk */
+  cursor: pointer;
 }
 
 .project:hover {
   background-color: rgba(40, 39, 88, 0.1);
-  transform: scale(1.2); /* Förstorar projektet när det hovras över */
-  z-index: 100; /* Ser till att det förstorade projektet ligger ovanpå de andra */
+  transform: scale(1.05)!important; /* Förstorar projektet när det hovras över */
 }
 
 
