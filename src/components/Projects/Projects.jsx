@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
 import { useInView } from 'react-intersection-observer';
+import React from 'react';
 
 
 export const Projects = () => {
@@ -51,6 +52,7 @@ export const Projects = () => {
 
 
     return (
+        <div id='projects' className={styles.projectsContainer}>
         <div ref={ref}>
             <h1 className={styles.h1}>MINA PROJEKT</h1>
             <div className={styles.projects}>
@@ -74,6 +76,7 @@ export const Projects = () => {
                     </motion.div>
                 ))}
             </div>
+        </div>
         </div>
     );
 }
