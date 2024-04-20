@@ -6,7 +6,7 @@
   text-align: center; /* Centrerar rubriken */
   align-items: center;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 5rem;
 }
 
 .h1 h1 {
@@ -36,7 +36,6 @@
   gap: 2rem; /* This will add space between the items */
   padding: 0 10%;
 }
-
 
 .projectContainer h3, p {
   z-index: 10;

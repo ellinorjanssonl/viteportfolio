@@ -1,88 +1,91 @@
 @import "../../vars.css";
 
 .flexContainer {
-  margin-top: 15%;
+  margin-top: 5rem;
+  width: 100%;
   display: flex;
-  justify-content: space-between; 
-  margin-left: 10%;
-  margin-right: 10%;
-  align-items: center;
+  align-items: center; /* Centrerar innehållet vertikalt */
+  padding: 0 10%; /* Ger lite marginal på sidorna */
 }
 
 .pContainer {
+  flex: 1; /* Tar upp 1/3 av tillgängligt utrymme */
   z-index: 1;
-  flex-basis: 40%; /* Justera denna bredd efter behov */
 }
 
 .p {
-  z-index: 2;
   font-size: 1rem; /* Justera textstorleken efter behov */
-  
+}
+
+.diamond {
+  flex: 1; /* Tar upp 1/3 av tillgängligt utrymme */
+  display: flex;
+  justify-content: center; /* Centrerar bilden horisontellt */
+}
+
+.diamond img {
+  margin-top: 10rem;
 }
 
 .skillsContainer {
-  flex-basis: 40%; /* Justera denna bredd efter behov */
-  border-radius: 15px;
+  flex: 1; /* Tar upp 1/3 av tillgängligt utrymme */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrerar skickligheter vertikalt */
+}
+
+.circlesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circles {
+  width: 4rem;
+  height: auto;
+  margin-bottom: 2rem; 
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Detta lägger till ett jämnt mellanrum mellan listobjekten */
+  padding: 0;
+  list-style: none;
 }
 
 .list li {
-  background-color: rgba(39, 12, 55, 0.2);
-  box-shadow: 0 4px 6px rgba(108, 198, 254, 0.7);
+  background-color: transparent;
+  border: 1px solid rgba(108, 198, 254, 0.5);
+  box-shadow: 0 0 5px rgba(215, 108, 254, 0.8);
   border-radius: 15px;
   color: var(--color-text);
   font-weight: bold;
   padding: 0.5rem;
-  font-size: 0.75rem; /* Justera textstorleken efter behov */
+  font-size: 0.75rem;
   display: flex;
   justify-content: center;
-  list-style: none;
-  flex: 1 calc(25% - 1px);
-  cursor: pointer;
+  margin-bottom: 1.5rem;
 }
-
 
 
 .h1 {
-  margin-left: 25%;
-  margin-right: 20%;
-  border-radius: 15px;
   font-size: 1rem;
   color: var(--color-text);
   margin-bottom: 5%;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
-.diamond {
-  display: flex; /* Gör att bilden hamnar i mitten av föräldern */
-  justify-content: center; /* Centrerar bilden horisontellt */ 
-  margin-bottom: 25%; /* Lägger till lite utrymme under bilden */
-}
 
-.diamond img {
-  display: flex; /* Tar bort extra utrymme runt bilden */
-  position: absolute; /* Positionerar bilden relativt till föräldern */
-}
-
-.skills {
-  font-weight: 500;
-  margin-top: 5%;
-}
 
 @media screen and (max-width: 768px) {
   .flexContainer {
     flex-direction: column;
     align-items: center; 
-  }
-  .skills {
-    padding-top: 5%;
+    padding: 0 5%;
   }
 
   .pContainer {
@@ -93,31 +96,60 @@
   .skillsContainer {
     flex-basis: 100%;
     justify-content: center;
-  }
-  .list {
-    margin: 0;
-    padding: 0;
-  }
-  .diamond img {
-    z-index: 0;
-    display:grid;
-    position: absolute; /* Positionerar bilden relativt till föräldern */
-    max-width: 100%; /* Justera storleken på din diamantbild */
+    margin-top: 0%;
+    padding-top: 0;
   }
 
+  .list {
+    top: 0;
+    margin-bottom: 3rem;
+  }
+
+  .skillGroup {
+    padding: 0.5rem;
+
+  }
+  .diamond img {
+    margin-top: 1.5rem;
+    z-index: 1;
+    position: relative; /* Positionerar bilden relativt till föräldern */
+    max-width: 100%; /* Justera storleken på din diamantbild */
+    height: 40vh;
+  }
+
+  .diamond {
+    margin-top: 0.5rem;
+    bottom: 0;
+  }
+  
   .list li {
     z-index: 2;
-    margin: 10px;
     padding: 0.5rem;
+    font-size: 0.6rem;
   }
-  .diamond {
-    margin-bottom: 40vh;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centrerar bilden horisontellt */
-  }
+
   .p {
     text-align: center;
   }
+
+  .circlesContainer {
+    flex-direction: row;
+    top:0;
+    gap: 0;
+    padding: 0;
+  }
+
+  .skillGroup {
+    margin-top: 0;
+  }
+
+  .circles {
+    margin-bottom: 2rem;
+  }
+
+  .list li {
+    margin-bottom: 2rem;
+  }
+
 
 }

@@ -42,10 +42,9 @@ export const Projects = () => {
             y: 0,
             transition: {
                 delay: i * 0.8,
-                // Uppdatera din transition att använda en spring-animation
                 type: "spring",
-                stiffness: 80, // Styr hur "hård" fjädern är, högre värde ger snabbare rörelse
-                damping: 8, // Styr hur snabbt rörelsen dämpas, lägre värde ger mer "studs"
+                stiffness: 100, // Styr hur "hård" fjädern är, högre värde ger snabbare rörelse
+                damping: 800, // Styr hur snabbt rörelsen dämpas, lägre värde ger mer "studs"
             },
         }),
     };

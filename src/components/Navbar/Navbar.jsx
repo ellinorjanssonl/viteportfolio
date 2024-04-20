@@ -45,7 +45,7 @@ export const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.leftContainer}>
-                <a className={styles.title} href="/CV2024.pdf" download="CV_Ellinor_Jansson_Lande.pdf">Ladda ner CV</a>
+                <a className={styles.title} href="/EllinorJanssonLande.pdf" download="CV_Ellinor_Jansson_Lande.pdf">Ladda ner CV</a>
                   </div>
            
             <div className={styles.rightContainer}>
